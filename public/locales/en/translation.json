@@ -1,0 +1,992 @@
+{
+  "generic": {
+    "add": "Add",
+    "back": "Back",
+    "cancel": "Cancel",
+    "caseCount_one": "{{count}} person",
+    "caseCount_other": "{{count}} persons",
+    "confirm": "Confirm",
+    "createNew": "Create New",
+    "error": "Something went wrong",
+    "expired": "Expired",
+    "expiresIn": "Expires {{expiry}}",
+    "expiredAt": "Expired {{expiry}}",
+    "failed": "Failed",
+    "fromDate": "From {{date}}",
+    "lifeLong": "LifeLong",
+    "loading": "Loading...",
+    "next": "Next",
+    "noData": "There's no data yet",
+    "passed": "Passed",
+    "remove": "Remove",
+    "reuse": "Reuse",
+    "see": "See",
+    "seeDetails": "See details",
+    "send": "Send",
+    "showAllColumns": "Show all columns",
+    "skip": "Skip",
+    "download": "Download",
+    "continue": "Continue",
+    "and": "and",
+    "moreThan": "More than",
+    "lessThan": "Less than",
+    "within": "Within",
+    "downloadCSV": "Download <strong>CSV</strong>",
+    "downloadXLSX": "Download <strong>XLSX</strong>",
+    "save": "Save",
+    "downloadResultReport": "Download Result Report"
+  },
+  "guide": {
+    "position": "Position",
+    "code": "Code",
+    "copied": "Copied code to clipboard!",
+    "description": "Some columns required a specific code that the system can read and also represent the data that users want to input. Here’s a list of dataset and code.",
+    "header": "Spreadsheet client’s template",
+    "productPlan": "Product Plan",
+    "subHeader": "This is the example look of the spreadsheet client’s template. There are some fields that need a specific format to input so that the system can generate cases. If the format is not correct, the system won’t be able to create the case. The box below will show columns that need a specific format.",
+    "subTitle": "Spreadsheet client’s template provides solution for users to create multiple cases at the same time by input the format into the client’s template and upload to E-KYC Dashboard, the system will automatically generate all cases that input the right format and users will able to proceed the process.",
+    "title": "Guide for entering spreadsheet client’s template",
+    "titleCode": "Title Code",
+    "tooltip": "Click to copy",
+    "example": "Example.",
+    "infoRequired": {
+      "position": "required quotation mark (“”) and data should be in data set",
+      "title": "required quotation mark (“”) and data should be in data set",
+      "baseSalary": "required quotation mark (“”) and data should be in data set",
+      "citizenID": "required quotation mark (“”)",
+      "passportNumber": "required quotation mark (“”)",
+      "mobile": "required quotation mark (“”)",
+      "firstName": "required text",
+      "middleName": "required text",
+      "lastName": "required text",
+      "department": "required text",
+      "email": "required text",
+      "notifyType": "required text",
+      "dateOfBirth": "data should be in ISO format",
+      "phoneNumber": "required quotation mark (“”)"
+    }
+  },
+  "bulkSelected": {
+    "selected": "{{count}} selected"
+  },
+  "datePicker": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "week": "7 days ago",
+    "twoWeek": "14 days ago",
+    "month": "30 days ago",
+    "submit": "Select",
+    "close": "Close",
+    "clear": "Select date"
+  },
+  "progressBar": {
+    "title": "Date of receiving result"
+  },
+  "createCaseForm": {
+    "title": "Create Case",
+    "choosePosition": "Choose Position",
+    "inputForm": "Specify the applicant's details",
+    "types": {
+      "manualInput": {
+        "header": "Choose a case creation method",
+        "title": "Manual Input",
+        "subTitle": "Enter applicant information one by one"
+      },
+      "csvInput": {
+        "title": "Upload File",
+        "subTitle": "Upload xlsx or csv into the system"
+      }
+    },
+    "form": {
+      "add": "Add candidate",
+      "remove": "Remove"
+    },
+    "modal": {
+      "title": "Exit case creation",
+      "subTitle": "All information you enter will not be saved. Do you want to leave?",
+      "confirmButton": "Leave this page",
+      "cancelButton": "Stay"
+    },
+    "result": {
+      "confirm": "Confirm to create the case",
+      "header": "Check case creation information",
+      "title": "Title",
+      "name": "Name",
+      "dateOfBirth": "Date of birth",
+      "address": "Contact Info",
+      "age": "({{ age }}years)",
+      "inspection": "Inspection:",
+      "inspectionNumber_one": "{{ count }} program",
+      "inspectionNumber_other": "{{ count }} programs",
+      "applicant": "Number of applicants:",
+      "applicantNumber_one": "{{ count }} person",
+      "applicantNumber_other": "{{ count }} people"
+    },
+    "labels": {
+      "applicants": "Applicant No.{{count}}",
+      "selectPosition": "Register Position",
+      "recommendedProcess_one": "Recommended Program ( {{count}} program )",
+      "recommendedProcess_other": "Recommended Programs ( {{count}} programs )",
+      "frontIdCard": "E-KYC",
+      "passport": "E-KYC",
+      "dipChip": "Dip Chip",
+      "criminalRecord": "Criminal Check",
+      "socialSecurityHistory": "Employment Verification",
+      "adverseMedia": "Adverse Media Check",
+      "bankruptcy": "Bankruptcy Check",
+      "sanction": "Sanctions List",
+      "education": "Education Check",
+      "income": "Income Check",
+      "employmentReference": "Reference Check",
+      "contract": "Contact information",
+      "baseSalary": "Base salary",
+      "certificationNumber": "Certification number",
+      "citizenId": "Citizen ID",
+      "claimNotifyNumber": "Claim notify number",
+      "dateOfBirth": "Date of birth",
+      "email": "Email",
+      "firstName": "First name",
+      "middleName": "Middle name (If any)",
+      "lastName": "Last name",
+      "memberNumber": "Member number",
+      "notifyType": "Notify type",
+      "passportNumber": "Passport number",
+      "phoneNumber": "Phone No.",
+      "remark": "Remark",
+      "required": "Required",
+      "risk": "Risk Level",
+      "gender": "Gender",
+      "title": "Title",
+      "translations.en.label": "English",
+      "translations.en.name": "English",
+      "translations.th.label": "Thai",
+      "translations.th.name": "Thai",
+      "applyPosition": "Apply position",
+      "department": "Department"
+    },
+    "placeholders": {
+      "baseSalary": "Base salary",
+      "caseType": "Select case",
+      "certificationNumber": "Certification No.",
+      "citizenId": "Citizen ID",
+      "claimNotifyNumber": "Claim Notify Number",
+      "dateOfBirth": "Date of birth",
+      "email": "Input email",
+      "firstName": "First name",
+      "middleName": "Middle name",
+      "lastName": "Last name",
+      "notifyType": "Notify type",
+      "passportNumber": "Input passport number",
+      "phoneNumber": "Input phone number",
+      "productPlan": "Product",
+      "remark": "Remark",
+      "required": "Required",
+      "title": "Title",
+      "translations.en.label": "English",
+      "translations.en.name": "English",
+      "translations.th.label": "Thai",
+      "translations.th.name": "Thai",
+      "applyPosition": "Apply position",
+      "department": "Department"
+    }
+  },
+  "duplicate": {
+    "title": "Warning",
+    "cancel": "Cancel this case",
+    "message": {
+      "success_one": "Case created successfully ({{count}} case)",
+      "success_other": "Cases created successfully ({{count}} cases)",
+      "error": "Something went wrong"
+    },
+    "modal": {
+      "title": "Exit case creation",
+      "subTitle": "The case(s) will proceed based on what you have selected."
+    },
+    "header": {
+      "createdAt": "Created date",
+      "completedAt": "Completed date",
+      "status": "Status",
+      "process": "Checked Program",
+      "details": "Details"
+    },
+    "warning": {
+      "title": "The applicant last checked on {{date}} ({{day}})",
+      "subTitle": "Please check the details to prevent duplicate checking."
+    }
+  },
+  "createCaseCsv": {
+    "title": "Create case by uploading data",
+    "description": "Choose file to upload",
+    "exampleFile": {
+      "title": "Sample template data file",
+      "description": "You can download the sample template data file to fill in the information and upload it into the system",
+      "instruction": "Read the user manual"
+    },
+    "validate": {
+      "title": "Create case by uploading data",
+      "description_one": "{{count}} error found. Please check and correct the information accurately",
+      "description_other": "{{count}} errors found. Please check and correct the information accurately",
+      "delete": "Are you sure you want to delete this case?",
+      "isIncorrect": " is incorrect"
+    },
+    "fields": {
+      "position": "Position",
+      "title": "Title",
+      "firstName": "First name",
+      "middleName": "Middle name (If any)",
+      "lastName": "Last name",
+      "dateOfBirth": "Date of birth",
+      "baseSalary": "Base Salary",
+      "department": "Department",
+      "passportNumber": "Passport No.",
+      "phoneNumber": "Phone No.",
+      "email": "Email",
+      "notifyType": "Notify type",
+      "delete": ""
+    },
+    "validations": {
+      "required": "{{fieldName}} is required",
+      "invalid": "{{fieldName}} is invalid"
+    }
+  },
+  "fileUpload": {
+    "drag": "Please drag a file or",
+    "click": "click here"
+  },
+  "tag": {
+    "empty": "No tag",
+    "title": {
+      "filter": "Recommend filtered tags",
+      "suggest": "Suggested tags"
+    },
+    "subTitle": "Please click <strong>Add</strong> button or <strong>Enter</strong> for create a new tag.",
+    "button": "Add",
+    "placeholder": {
+      "tagOperator": "Contain",
+      "input": "Enter a tag",
+      "filter": "Choose Tags",
+      "noInput": "Add Tag"
+    }
+  },
+  "filters": {
+    "search": "Search",
+    "searchFilters": "Search Filters",
+    "positions": "Positions",
+    "completedAt": "Completed At",
+    "tags": "Tags",
+    "clear": "Clear All",
+    "searchFieldTooltip": {
+      "searchBy": "Search by {{labels}}",
+      "labels": {
+        "firstName": "Name",
+        "middleName": "Middle name",
+        "lastName": "Last name",
+        "citizenId": "Citizen ID",
+        "phoneNumber": "Phone number",
+        "email": "Email"
+      }
+    },
+    "placeholder": {
+      "search": "Type Something",
+      "positions": "Choose position"
+    }
+  },
+  "months": {
+    "placeholder": {
+      "day": "day",
+      "month": "month",
+      "year": "year"
+    },
+    "jan": "January",
+    "feb": "February",
+    "mar": "March",
+    "apr": "April",
+    "may": "May",
+    "jun": "June",
+    "jul": "July",
+    "aug": "August",
+    "sep": "September",
+    "oct": "October",
+    "nov": "November",
+    "dec": "December"
+  },
+  "validation": {
+    "caseType": "Please select a case type",
+    "citizenID": "Please enter a valid ID number.",
+    "dobCaseType": "The age doesn’t match with case type.",
+    "email": "Please enter a valid email format.",
+    "link": "Please enter a valid link format.",
+    "emailAlreadyExists": "This email already exists.",
+    "passportNumber": "Please enter a valid passport number.",
+    "phone": "Please enter a valid phone number.",
+    "required": "This field is required.",
+    "retryLimit": "Must be valid number",
+    "thaiName": "Please enter your name in Thai.",
+    "englishName": "Please enter your name in English.",
+    "inputDifferentLanguage": "Please enter name in same language.",
+    "confirmPassword": "Password must be matched",
+    "atLeastOneNumber": "Password must include number",
+    "atLeastOneLowerCase": "Password must include lowercase letter",
+    "atLeastOneUpperCase": "Password must include uppercase letter",
+    "passwordLength": "Password must be at least {{min}} characters but not more than {{max}}",
+    "minPasswordLength": "Password must be at least {{min}} characters",
+    "maxPasswordLength": "Password must not be longer than {{max}} characters",
+    "pdfPasswordBlacklistedChar": "Password must not contain $ \\ ' \" ` and space"
+  },
+  "pageNotFound": {
+    "title": "404",
+    "subTitle": "Sorry, page not found"
+  },
+  "sidebar": {
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "backgroundCheck": "Background Check",
+    "help": "Help",
+    "setting": "Setting",
+    "selectLanguage": "Select Language"
+  },
+  "language": {
+    "th": "ไทย",
+    "en": "English"
+  },
+  "resendLink": {
+    "button": "Resend Link",
+    "sending": "Sending",
+    "sent": "Sent",
+    "confirmTitle": "Confirm resend link",
+    "lastSent": "Last sent: {{date}}",
+    "sms": "Phone number",
+    "email": "Email",
+    "link": "Link",
+    "formTitle": "Contact information (For resend link)",
+    "copied": "Copied code to clipboard!"
+  },
+  "failedReasons": {
+    "title": "Failed Reasons",
+    "reasonsCount": "{{count}} reasons",
+    "frontIdCard": {
+      "default": "Front ID Card not pass",
+      "aboutToExpire": "The ID card is about to expire.",
+      "comparison": "The ID card information does not match the provided information.",
+      "expired": "ID card is expired.",
+      "font": "The font style does not match the standard font style.",
+      "hologram": "The hologram does not match the standard.",
+      "microprint": "The microprint does not match the standard (missing or incorrect).",
+      "mugshot": "The mugshot image does not match the standard (blur, obscured).",
+      "recapture": "The Source of the Front Id card image is invalid (monitor, paper).",
+      "redLine": "The watermark format on the mugshot image is invalid.",
+      "restrictedAge": "The user needs to meet the minimum age requirement.",
+      "light": "Front ID Card has failed due to the data was obscured by overlapping elements."
+    },
+    "passport": {
+      "default": "Passport not pass",
+      "aboutToExpire": "The passport is about to expire.",
+      "activeAuthFailed": "Active authentication challenge failed.",
+      "comparison": "The passport information does not match the provided information.",
+      "chipAuthFailed": "Chip authentication challenge failed.",
+      "expired": "The passport is expired.",
+      "nfcNotSupported": "NFC chip reading was not supported.",
+      "passiveAuthFailed": "Digital signature authentication did not match.",
+      "restrictedAge": "The age is outside of the allowed range.",
+      "restrictedCountry": "The country is not allowed to verify.",
+      "restrictedNationality": "The country is not allowed to verify."
+    },
+    "backIdCard": {
+      "default": "Back ID Card not pass",
+      "comparison": "The Back ID Card information does not match the provided information."
+    },
+    "liveness": {
+      "default": "Liveness not pass."
+    },
+    "faceRecognition": {
+      "default": "Face recognition not pass.",
+      "comparison": "The face does not match."
+    },
+    "faceAttributes": {
+      "hat": "Hat",
+      "glasses": "Sunglasses",
+      "mask": "Mask",
+      "moreThanOnePerson": "more than 1 person detected",
+      "faceOccluded": "Detected object covering the face"
+    },
+    "dopa": {
+      "default": "DOPA not pass."
+    },
+    "dipChip": {
+      "default": "Dip Chip not pass."
+    },
+    "chipDopa": {
+      "default": "Chip DOPA not pass."
+    }
+  },
+  "evaluationResultLabel": {
+    "verified": "Checked",
+    "completed": "Needs review"
+  },
+  "resultProgress": {
+    "noProgress": "Pending result",
+    "progressLabel": "Received {{ progress }} / {{ total }}",
+    "popupTitle": "Progress tracking"
+  },
+  "resultOverview": {
+    "verifiedCount": "Verified {{count}} / {{total}}",
+    "allPassed": "All verified"
+  },
+  "flowTable": {
+    "requiredProcesses_one": "{{ count }} program",
+    "requiredProcesses_other": "{{ count }} programs",
+    "tab": {
+      "all": "All",
+      "pendingClient": "In progress",
+      "blocked": "KYC not verified",
+      "pendingOperation": "Pending result",
+      "received": "Result received"
+    },
+    "receivedTab": {
+      "all": "All received",
+      "verified": "Checked",
+      "completed": "Needs review"
+    },
+    "status": {
+      "open": "In progress",
+      "pendingClient": "In progress",
+      "expired": "Expired",
+      "blocked": "KYC not verified",
+      "pendingOperation": "Pending result",
+      "completed": "Received result",
+      "verified": "Received result",
+      "rejected": "Rejected by agent",
+      "approved": "Approved by agent"
+    },
+    "header": {
+      "name": "Name",
+      "position": "Position",
+      "createdAt": "Created date",
+      "updatedAt": "Updated date",
+      "expiresAt": "Expiry date",
+      "completedAt": "Received date",
+      "status": "Status",
+      "details": "Details",
+      "citizenId": "Citizen ID",
+      "contact": "Contact",
+      "requiredProcesses": "Checking programs",
+      "ownerEmail": "Owner's email",
+      "failedReasons": "Reason(s)",
+      "tags": "Tag(s)",
+      "resultOverview": "Result overview",
+      "resultStatus": "Evaluation result"
+    }
+  },
+  "overviewPage": {
+    "pageTitle": "Overview summary",
+    "overviewBox": {
+      "title": "Background Checks overview",
+      "all": "Total candidates",
+      "blocked": "KYC not verified",
+      "pendingOperation": "Pending result",
+      "received": "Result received",
+      "fromTotal": "from total",
+      "diffTooltip": "Compared with total candidates from",
+      "diffDaychanges_one": "from last {{count}} day",
+      "diffDaychanges_other": "from last {{count}} days",
+      "noDiff": "Same amount"
+    },
+    "candidatesBox": {
+      "title": "Candidate list"
+    },
+    "resultSummaryBox": {
+      "title": "Result summary",
+      "allResults": "All results",
+      "passed": "Checked",
+      "notPassed": "Needs review"
+    }
+  },
+  "backgroundCheckPage": {
+    "pageTitle": "Background Check",
+    "createCase": "Create Case",
+    "title": "Title"
+  },
+  "helpPage": {
+    "pageTitle": "Help",
+    "documentation": {
+      "title": "Documentation",
+      "descriptions": "Get the most out of our app by downloading our user manuals. These files will guide you through using the Dashboard.",
+      "downloadFiles": "Download Files",
+      "empty": "There are no document files available at this time."
+    }
+  },
+  "settingsPage": {
+    "pageTitle": "Settings",
+    "general": {
+      "title": "General",
+      "logoSetting": {
+        "title": "Logo",
+        "subTitle": "Only .PNG file maximum 500x500 px",
+        "lightTheme": "Light theme",
+        "darkTheme": "Dark theme",
+        "lightThemeDescriptions": "The logo can be in color.",
+        "darkThemeDescriptions": "The logo should contrast with a black background.",
+        "changeImage": "Change image",
+        "requiredLogo": "Image dimensions must be 500 x 500 pixels or less.",
+        "requiredType": "Invalid file type. Please choose a PNG file."
+      },
+      "buttonsSettings": {
+        "title": "Buttons",
+        "subTitle": "This button will show on customer display.",
+        "changeThemeButton": {
+          "title": "Change light/dark theme button",
+          "subTitle": "If close, candidate will see the light theme as default."
+        },
+        "changeLanguageButton": {
+          "title": "Change language button TH/EN",
+          "subTitle": "If close, candidate will see Thai language as default."
+        }
+      },
+      "fontSettings": {
+        "title": "Font",
+        "subTitle": "This font will show on candidate display."
+      },
+      "colorSettings": {
+        "title": "Color",
+        "subTitle": "The button color will change on agent dashboard and candidate display.",
+        "description": "Main color (buttons)"
+      },
+      "approvedReason": "Confirm approved reasons for manual approve",
+      "rejectedReason": "Confirm rejected reasons for manual approve"
+    },
+    "criteria": {
+      "tabTitle": "Criteria",
+      "titleOverall": "Configure Overall Condition",
+      "titleByPosition": "Configure Condition by Position",
+      "subTitle": "The system will process based on the conditions you have set.",
+      "sectionTitle": "Criteria to be",
+      "position": "Position",
+      "searchByPosition": "Search Position",
+      "useCriteriaSettingsByPosition": {
+        "label": "Configure Condition by Positions",
+        "on": {
+          "confirmTitle": "Do you want to set the conditions by position?",
+          "confirmMessage": "Press Confirm to configure by position"
+        },
+        "off": {
+          "confirmTitle": "Do you want to set the overall conditions?",
+          "confirmMessage": "Press Confirm to configure overall conditions"
+        }
+      },
+      "positionOverlay": {
+        "title": "Configure Criteria for {{position}}",
+        "cancelTitle": "Do you want to leave this page",
+        "cancelSubTitle": "Press Confirm to cancel the edit and go back"
+      },
+      "criminalRecord": {
+        "default": "Not found record",
+        "custom": "Self configure",
+        "formTitle": "Criteria that are not accepted to pass (considered from the judgment date).\nRemark : Cases of other types besides this will not meet the criteria."
+      },
+      "socialSecurityHistory": {
+        "default": "Found record",
+        "custom": "Self configure",
+        "formTitle": "Criteria that are not accepted to pass.",
+        "overEmployed": "Overlapping Work History",
+        "maxYearGap": "Year Gap",
+        "jobSwitch": "Job Transitions",
+        "blacklistedCompanies": "Work Experience",
+        "companyNamePlaceholder": "Company name",
+        "addCompany": "Add company"
+      }
+    },
+    "message": {
+      "success": "Settings saved successfully.",
+      "error": "Failed to save settings."
+    },
+    "preview": {
+      "title": "Example",
+      "theme": {
+        "dark": "Dark",
+        "light": "Light"
+      }
+    }
+  },
+  "processes": {
+    "criminalRecord": "Criminal Check",
+    "socialSecurityHistory": "Employment Verification",
+    "adverseMedia": "Adverse Media check",
+    "bankruptcy": "Bankruptcy Check",
+    "sanction": "Sanctions List",
+    "education": "Education Check",
+    "income": "Income Check",
+    "kyc": "KYC",
+    "employmentReference": "Reference Check",
+    "frontIdCard": "Front ID Card",
+    "backIdCard": "Back ID Card",
+    "dopa": "Id Card Verification",
+    "idCardVerification": "Id Card Verification",
+    "passport": "Passport",
+    "liveness": "Liveness",
+    "faceRecognition": "Face Recognition",
+    "overview": "Overview"
+  },
+  "latestClientProcess": {
+    "title": "Latest status",
+    "open": "Waiting for action",
+    "frontIdCard": "Take Front ID",
+    "backIdCard": "Take Back ID",
+    "dopa": "Dopa",
+    "passport": "Take Passport",
+    "liveness": "Perform face recognition",
+    "faceRecognition": "Perform face recognition",
+    "criminalRecord": "Sign CC document",
+    "socialSecurityHistory": "Sign EV document",
+    "education": "Fill education form",
+    "income": "Upload income document",
+    "employmentReference": "Fill reference form",
+    "undefined": "-"
+  },
+  "caseDetail": {
+    "title": "Case Detail",
+    "showOnlyNotVerified": "Show only not verified",
+    "historyDropdown": {
+      "label": "Result Attempt {{attempt}} ({{date}})"
+    },
+    "menuButton": {
+      "title": "Menu",
+      "tag": "Tag",
+      "resendLink": "Resend Link",
+      "sendHistory": "Send Link History",
+      "delete": "Delete",
+      "deletePopup": {
+        "title": "Are you sure you want to delete this case?",
+        "subTitle": "The process cannot be undone."
+      }
+    },
+    "summaryReportButton": {
+      "title": "Summary Report",
+      "contact": "Please contact support team 065-524-2873 \n to unlock the download feature."
+    },
+    "documentPasswords": {
+      "title": "Document Password",
+      "fileName": "File name",
+      "password": "Password",
+      "copied": "Copied password to clipboard!",
+      "noFile": "No files have been uploaded"
+    },
+    "downloadZip": {
+      "title": "All Documents",
+      "error": {
+        "title": "Download failed",
+        "detail": "An error has occurred , please try again."
+      }
+    },
+    "CRSSHResultPasswordOverlay": {
+      "title": {
+        "CR": "Please set password for criminal record result file",
+        "SSH": "Please set password for social security result file",
+        "CRSSH": "Please set password for criminal record result file and social security result file"
+      },
+      "subTitle": "Set password for this file due to sensitive information."
+    },
+    "overview": {
+      "mugshotDescription": "Proprietor’s facial information from the verification process.",
+      "mugshotTitle": "Proprietor’s Mugshot",
+      "passportNumber": "Passport No.",
+      "dateOfBirth": "Date of birth",
+      "citizenId": "Citizen ID",
+      "phoneNumber": "Phone No.",
+      "email": "Email",
+      "sms": "SMS",
+      "sendLinkDate": "Send link date & time",
+      "resultStatus": "Evaluation result",
+      "updatedAt": "Last updated",
+      "createdBy": "Created By",
+      "currentStep": "Current Step"
+    },
+    "verification": {
+      "processResultMenuTab": {
+        "latest": "Latest Result",
+        "attemptHistory": "Attempt History"
+      },
+      "attempt": {
+        "frontIdCard": "Font ID Card Verification - Attempt {{count}}",
+        "backIdCard": "Back ID Card Verification - Attempt {{count}}",
+        "passport": "Passport - Attempt {{count}}",
+        "dopa": "Id Card Verification - Attempt {{count}}",
+        "faceRecognition": "Face Recognition - Attempt {{count}}"
+      },
+      "headers": {
+        "initial": "User Input",
+        "ocr": "OCR Result",
+        "edit": "Edited OCR",
+        "dataSource": "Data Source",
+        "remark": "Remark",
+        "verificationDate": "Verification Date",
+        "verificationResult": "Verification Result",
+        "verificationTime": "Verification Time",
+        "liveness": "Liveness",
+        "faceComparison": "Face Comparison"
+      },
+      "fields": {
+        "citizenId": "Citizen Id",
+        "title": "Title",
+        "firstNameTh": "Name (Thai)",
+        "middleNameTh": "Middle name (Thai)",
+        "lastNameTh": "Surname (Thai)",
+        "firstNameEn": "Name (English)",
+        "middleNameEn": "Middle name (English)",
+        "lastNameEn": "Surname (English)",
+        "dateOfBirth": "Date of birth",
+        "address": "Address",
+        "issueDate": "Issue date",
+        "expiryDate": "Expiry date",
+        "passportNumber": "Passport number",
+        "firstName": "Name",
+        "middleName": "Middle name",
+        "lastName": "Surname",
+        "gender": "Gender",
+        "issuingState": "Issuing State",
+        "nationality": "Nationality",
+        "laserCode": "Laser Code"
+      }
+    },
+    "crSSH": {
+      "criminalRecord": {
+        "tableTitle": "Criminal record check results from Criminal Record Division Royal Thai Police",
+        "remark": {
+          "verifiedWithRecords": "Remark: Passed the employment acceptance according to the set criteria.",
+          "notVerified": "Remark: Did not pass the employment acceptance criteria due to the discovery of criminal record(s).",
+          "minJudgementDay": "Remark: Did not pass the employment acceptance criteria due to the adjudication not matching the criteria time range. (Case of {{criminalRecordTypes}})"
+        }
+      },
+      "socialSecurityHistory": {
+        "tableTitle": "Employment history verification result",
+        "startWorking": "started working at",
+        "resigned": "resigned at",
+        "remark": {
+          "notVerifiedWithFailedReasons": "Remark: Did not pass the employment acceptance criteria due to the employment history not matching the criteria. ({{reasons}})",
+          "notVerifiedNoRecord": "Remark: Did not pass the employment acceptance due to the absence of employment history.",
+          "overEmployed": "Overlapping work history",
+          "maxYearGap": "Year gap",
+          "jobSwitch": "Job transitions",
+          "blacklistedCompanies": "Work experience at company in criteria"
+        }
+      },
+      "citizenId": "Citizen ID",
+      "notFoundRecord": "Not found record",
+      "rejected": "Unable Verify",
+      "remark": "Remark:",
+      "result": "Verification Result:",
+      "resultWarning": "Do not share information, without the permission of the data subject. if violated, there will be penalties under the personal data protection law.",
+      "headers": {
+        "order": "Number",
+        "type": "Inspection System",
+        "result": "Verification Result",
+        "remark": "Remark",
+        "receivedDate": "Received Date",
+        "receivedTime": "Received Time"
+      },
+      "inspectionSystem": {
+        "criminalRecords": "Criminal History",
+        "warrantRecords": "Arrest Warrant History",
+        "socialSecurity": "Social Security Info"
+      }
+    },
+    "employmentReference": {
+      "fields": {
+        "name": "Full Name",
+        "details": "Details",
+        "result": "Result",
+        "referenceList": "Reference List",
+        "position": "The position of the referee",
+        "companyName": "The company of the referee",
+        "phoneNumber": "The phone number of the referee",
+        "companyPosition": "The position of the applicant",
+        "registeredPosition": "The applied position"
+      },
+      "result": {
+        "passed": "Match",
+        "failed": "Not match",
+        "unverifiable": "Can't be reviewed"
+      }
+    },
+    "income": {
+      "result": "Result",
+      "remark": "Remark",
+      "headers": {
+        "month": "Month",
+        "initial": "Base Salary\n(Initial data)",
+        "psBase": "Base Salary\n(Payslip)",
+        "psNet": "Net Salary\n(Payslip)",
+        "bsNet": "Net Salary\n(Bank-statement)"
+      }
+    },
+    "education": {
+      "instituteCertificateUrl": "Letter from institution",
+      "method": "Method",
+      "result": "Verification result",
+      "remark": "Remark",
+      "documentUrl": "Transcript",
+      "fields": {
+        "instituteCertificateUrl": "Pending document from institution",
+        "method": {
+          "digital": "Digital Transcript Check with DGA",
+          "institute": "Check with institution",
+          "unverifiable": "Unable to verify"
+        },
+        "result": {
+          "verified": "Verified",
+          "notVerified": "Not verified"
+        }
+      }
+    },
+    "sanction": {
+      "result": {
+        "title": "Verification Result From United Nation Sanction",
+        "found": "It is listed on the Global Sanction List of the UN, EU, or HM.",
+        "notFound": "It is not listed on the Global Sanction List of the UN, EU, or HM."
+      },
+      "alias": "Alias",
+      "birthDate": "Date of birth",
+      "citizenship": "Citizenship",
+      "identificationDocuments": "Type",
+      "sanctionBy": "Sanctions by",
+      "remark": "Remark",
+      "unions": {
+        "un": "United Nation",
+        "eu": "European Union",
+        "hm": "HM Treasury"
+      }
+    },
+    "bankruptcy": {
+      "found": "Found record",
+      "notFound": "Not found record",
+      "citizenId": "Citizen ID",
+      "title": "Verification result from Legal Execution Department, Ministry of Justice",
+      "headers": {
+        "result": "Verification Result",
+        "caseNo": "Case No.",
+        "bankruptcyBlackCaseNo": "Bankruptcy Black Case No.",
+        "bankruptcyRedCaseNo": "Bankruptcy Red Case No.",
+        "byPlaintiff": "By plaintiff"
+      }
+    },
+    "adverseMedia": {
+      "footer": "We used \"{{searchTerm}}\" as a key word to search in search engine. Please noted that this is preliminary search for adverse media check. We recommend evaluating with caution.",
+      "notFound": "\"{{searchTerm}}\" did not match any online news results.",
+      "notCheck": "Online reputation has not been checked",
+      "record": "{{countRecord}} record",
+      "from": "From keyword",
+      "detected": "Detected"
+    }
+  },
+  "status": {
+    "income": {
+      "passed": "Passed",
+      "notPassed": "Not Passed",
+      "unableToVerify": "Unable to Verify"
+    },
+    "batchStatus": {
+      "inProgress": "In Progress",
+      "notVerified": "Not verified",
+      "verified": "Verified",
+      "rejected": "Rejected by agent",
+      "approved": "Approved by agent",
+      "needReview": "needs review",
+      "checked": "checked"
+    },
+    "backgroundCheck": {
+      "null": "clear status",
+      "blocked": "KYC not verified",
+      "open": "created",
+      "pendingClient": "in progress",
+      "pendingOperation": "pending result",
+      "expired": "expired",
+      "rejected": "rejected",
+      "unverifiable": "unverifiable",
+      "completed": "needs review",
+      "verified": "checked"
+    },
+    "socialSecurityHistory": {
+      "null": "clear status",
+      "blocked": "KYC not verified",
+      "open": "created",
+      "pendingClient": "in progress",
+      "pendingOperation": "pending result",
+      "expired": "expired",
+      "rejected": "rejected",
+      "completed": "no record",
+      "verified": "found record"
+    },
+    "educationDocument": {
+      "received": "received"
+    },
+    "verification": {
+      "accepted": "accepted",
+      "completed": "completed",
+      "expired": "expired",
+      "incomplete": "incomplete",
+      "in_progress": "in progress",
+      "null": "clear status",
+      "open": "open",
+      "verified": "verified"
+    }
+  },
+  "manualApprove": {
+    "title": "KYC not pass",
+    "description": "Please check details. to decide on approval to proceed or reject",
+    "latestRemark": "Latest Remark: ",
+    "remark": "Remark: ",
+    "approve": "Approve",
+    "reject": "Reject",
+    "confirmModal": {
+      "approved": {
+        "title": "Confirm approval",
+        "confirmBy": "Approved by: ",
+        "remarkTitle": "Please select approval reason."
+      },
+      "rejected": {
+        "title": "Confirm rejected",
+        "confirmBy": "Rejected by:",
+        "remarkTitle": "Please select rejected reason."
+      }
+    }
+  },
+  "transaction": {
+    "title": "Credit Usage History",
+    "searchFiltersTitle": "Search Filters",
+    "headers": {
+      "dateTime": "Date/Time",
+      "transactionRule": "Transaction Type",
+      "transactionId": "Transaction Id",
+      "creditUsage": "Credit Usage"
+    },
+    "placeholder": {
+      "chooseTransactionRule": "Choose transaction rule",
+      "chooseDate": "Choose date"
+    }
+  },
+  "creditBalance": {
+    "yourBalance": "Your balance:",
+    "credits": "Credits"
+  },
+  "format": {
+    "csv": ".csv",
+    "xlsx": ".xlsx"
+  },
+  "lead": {
+    "recommend": "Recommended!",
+    "contact": "Let us assist in recommending features that suit you.\nContact our customer service at {{contact}}.",
+    "confirmButton": "Interested",
+    "cancelButton": "Cancel",
+    "message": {
+      "success": "The system has successfully recorded your interest.\nOur customer service team will contact you.",
+      "failed": "Something went wrong"
+    }
+  },
+  "bulkDownloadNotice": {
+    "title": "The system will send the email attach with the download link within 30 minutes",
+    "description": "Please download within 24 hours after receiving the email",
+    "error": {
+      "title": "Download fail",
+      "detail": "Something went wrong"
+    }
+  }
+}

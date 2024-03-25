@@ -1,0 +1,5 @@
+<svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+  <path id="Path_53506" data-name="Path 53506"
+    d="M9.5,2A7.5,7.5,0,1,0,17,9.5,7.5,7.5,0,0,0,9.5,2Zm0,13.5a6,6,0,1,1,6-6A6,6,0,0,1,9.5,15.5Zm3-6.75H10.25V6.5a.75.75,0,0,0-1.5,0V8.75H6.5a.75.75,0,0,0,0,1.5H8.75V12.5a.75.75,0,0,0,1.5,0V10.25H12.5a.75.75,0,0,0,0-1.5Z"
+    transform="translate(-2 -2)" fill="currentColor" />
+</svg>

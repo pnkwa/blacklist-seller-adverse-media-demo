@@ -1,0 +1,246 @@
+{
+  "software": {
+    "position": {
+      "translations": {
+        "th": "Software Engineer",
+        "en": "Software Engineer"
+      }
+    },
+    "verification": {
+      "frontIdCardConfig": {
+        "required": true,
+        "isEditable": true,
+        "endFlowOnFailure": false,
+        "threshHold": 0.8,
+        "validations": [
+          "comparison"
+        ],
+        "compareNonEssentialFields": false,
+        "attempts": 3
+      },
+      "faceRecognitionConfig": {
+        "required": true,
+        "isEditable": true,
+        "endFlowOnFailure": false,
+        "useUnverifiedDependencies": true,
+        "attempts": 3,
+        "livenessCount": 1,
+        "threshHold": 0.9,
+        "minFaceTecMatchLevel": 4
+      },
+      "livenessConfig": {
+        "required": true,
+        "isEditable": true,
+        "endFlowOnFailure": false,
+        "useUnverifiedDependencies": true,
+        "attempts": 3,
+        "livenessCount": 1,
+        "threshHold": 0.9,
+        "minFaceTecMatchLevel": 4
+      },
+      "expiryDuration": "P5D",
+      "notifyDuration": "P5D",
+      "smsNotifyContent": "เรียนคุณ ${firstName} ${lastName} กรุณายืนยันตัวตนด้วยบัตรประชาชนผ่านลิงก์ ${CLIENT_URL}",
+      "emailNotifyContent": "เรียนคุณ ${firstName} ${lastName} กรุณายืนยันตัวตนด้วยบัตรประชาชนผ่านลิงก์ ${CLIENT_URL}",
+      "emailNotifySubject": "แจ้งการยืนยันตัวตน"
+    },
+    "backgroundCheck": {
+      "processConfigs": {
+        "criminalRecord": true,
+        "socialSecurityHistory": true,
+        "adverseMedia": false,
+        "bankruptcy": false,
+        "sanction": false,
+        "education": false,
+        "employmentReference": false,
+        "income": false
+      },
+      "expiryDuration": "P5D"
+    },
+    "formKey": "kycForm",
+    "flowName": "idv-bgc"
+  },
+  "designer": {
+    "position": {
+      "translations": {
+        "th": "UX/UI Designer",
+        "en": "UX/UI Designer"
+      }
+    },
+    "verification": {
+      "frontIdCardConfig": {
+        "required": true,
+        "isEditable": true,
+        "endFlowOnFailure": false,
+        "threshHold": 0.8,
+        "validations": [
+          "comparison"
+        ],
+        "compareNonEssentialFields": false,
+        "attempts": 3
+      },
+      "faceRecognitionConfig": {
+        "required": true,
+        "isEditable": true,
+        "endFlowOnFailure": false,
+        "useUnverifiedDependencies": true,
+        "attempts": 3,
+        "livenessCount": 1,
+        "threshHold": 0.9,
+        "minFaceTecMatchLevel": 4
+      },
+      "livenessConfig": {
+        "required": true,
+        "isEditable": true,
+        "endFlowOnFailure": false,
+        "useUnverifiedDependencies": true,
+        "attempts": 3,
+        "livenessCount": 1,
+        "threshHold": 0.9,
+        "minFaceTecMatchLevel": 4
+      },
+      "expiryDuration": "P5D",
+      "notifyDuration": "P5D",
+      "smsNotifyContent": "เรียนคุณ ${firstName} ${lastName} กรุณายืนยันตัวตนด้วยบัตรประชาชนผ่านลิงก์ ${CLIENT_URL}",
+      "emailNotifyContent": "เรียนคุณ ${firstName} ${lastName} กรุณายืนยันตัวตนด้วยบัตรประชาชนผ่านลิงก์ ${CLIENT_URL}",
+      "emailNotifySubject": "แจ้งการยืนยันตัวตน"
+    },
+    "backgroundCheck": {
+      "processConfigs": {
+        "criminalRecord": true,
+        "socialSecurityHistory": true,
+        "adverseMedia": true,
+        "bankruptcy": true,
+        "sanction": true,
+        "education": true,
+        "employmentReference": true,
+        "income": true
+      },
+      "expiryDuration": "P5D"
+    },
+    "formKey": "kycForm",
+    "flowName": "idv-bgc"
+  },
+  "programmer": {
+    "position": {
+      "translations": {
+        "th": "Programmer",
+        "en": "Programmer"
+      }
+    },
+    "verification": {
+      "passportConfig": {
+        "required": true,
+        "isEditable": true,
+        "endFlowOnFailure": false,
+        "threshHold": 0.8,
+        "validations": [
+          "comparison"
+        ],
+        "compareNonEssentialFields": false,
+        "attempts": 3
+      },
+      "faceRecognitionConfig": {
+        "required": true,
+        "isEditable": true,
+        "endFlowOnFailure": false,
+        "useUnverifiedDependencies": true,
+        "attempts": 3,
+        "livenessCount": 1,
+        "threshHold": 0.9,
+        "minFaceTecMatchLevel": 4
+      },
+      "livenessConfig": {
+        "required": true,
+        "isEditable": true,
+        "endFlowOnFailure": false,
+        "useUnverifiedDependencies": true,
+        "attempts": 3,
+        "livenessCount": 1,
+        "threshHold": 0.9,
+        "minFaceTecMatchLevel": 4
+      },
+      "expiryDuration": "P5D",
+      "notifyDuration": "P5D",
+      "smsNotifyContent": "เรียนคุณ ${firstName} ${lastName} กรุณายืนยันตัวตนด้วยบัตรประชาชนผ่านลิงก์ ${CLIENT_URL}",
+      "emailNotifyContent": "เรียนคุณ ${firstName} ${lastName} กรุณายืนยันตัวตนด้วยบัตรประชาชนผ่านลิงก์ ${CLIENT_URL}",
+      "emailNotifySubject": "แจ้งการยืนยันตัวตน"
+    },
+    "backgroundCheck": {
+      "processConfigs": {
+        "criminalRecord": false,
+        "socialSecurityHistory": false,
+        "adverseMedia": false,
+        "bankruptcy": false,
+        "sanction": false,
+        "education": false,
+        "employmentReference": false,
+        "income": true
+      },
+      "expiryDuration": "P5D"
+    },
+    "formKey": "passportForm",
+    "flowName": "idv-bgc"
+  },
+  "native": {
+    "position": {
+      "translations": {
+        "th": "iOS Developer",
+        "en": "iOS Developer"
+      }
+    },
+    "verification": {
+      "frontIdCardConfig": {
+        "required": true,
+        "isEditable": true,
+        "endFlowOnFailure": false,
+        "threshHold": 0.8,
+        "validations": [
+          "comparison"
+        ],
+        "compareNonEssentialFields": false,
+        "attempts": 3
+      },
+      "faceRecognitionConfig": {
+        "required": true,
+        "isEditable": true,
+        "endFlowOnFailure": false,
+        "useUnverifiedDependencies": true,
+        "attempts": 3,
+        "livenessCount": 1,
+        "threshHold": 0.9,
+        "minFaceTecMatchLevel": 4
+      },
+      "livenessConfig": {
+        "required": true,
+        "isEditable": true,
+        "endFlowOnFailure": false,
+        "useUnverifiedDependencies": true,
+        "attempts": 3,
+        "livenessCount": 1,
+        "threshHold": 0.9,
+        "minFaceTecMatchLevel": 4
+      },
+      "expiryDuration": "P5D",
+      "notifyDuration": "P5D",
+      "smsNotifyContent": "เรียนคุณ ${firstName} ${lastName} กรุณายืนยันตัวตนด้วยบัตรประชาชนผ่านลิงก์ ${CLIENT_URL}",
+      "emailNotifyContent": "เรียนคุณ ${firstName} ${lastName} กรุณายืนยันตัวตนด้วยบัตรประชาชนผ่านลิงก์ ${CLIENT_URL}",
+      "emailNotifySubject": "แจ้งการยืนยันตัวตน"
+    },
+    "backgroundCheck": {
+      "processConfigs": {
+        "criminalRecord": false,
+        "socialSecurityHistory": false,
+        "adverseMedia": false,
+        "bankruptcy": false,
+        "sanction": false,
+        "education": false,
+        "employmentReference": false,
+        "income": true
+      },
+      "expiryDuration": "P5D"
+    },
+    "formKey": "kycForm",
+    "flowName": "idv-bgc"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/strict",
+    "plugin:@typescript-eslint/stylistic",
+    "plugin:eslint-comments/recommended",
+    "plugin:import/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint", "prettier", "classnames-enhanced"],
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.node.json"
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "settings": {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/resolver": {
+      "node": true,
+      "typescript": {
+        "project": "./tsconfig.eslint.json"
+      }
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    }
+  },
+  "rules": {
+    "arrow-body-style": 0,
+    "no-plusplus": "off",
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/lines-between-class-members": 0,
+    "@typescript-eslint/no-non-null-assertion": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/prefer-nullish-coalescing": [
+      "warn",
+      {
+        "ignoreMixedLogicalExpressions": true
+      }
+    ],
+    "@typescript-eslint/no-empty-function": 0,
+    "prettier/prettier": "warn",
+    "react/jsx-one-expression-per-line": 0,
+    "react/no-array-index-key": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/require-default-props": 0,
+    "arrow-parens": ["warn", "always"],
+    "jsx-a11y/no-autofocus": 0,
+    "function-paren-newline": 0,
+    "require-yield": 0,
+    "react/function-component-definition": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-unstable-nested-components": 0,
+    "react/prefer-stateless-function": 0,
+    "react/prop-types": 0,
+    "react-hooks/exhaustive-deps": "warn",
+    "object-curly-newline": 0,
+    "global-require": 0,
+    "func-names": 0,
+    "no-empty": 0,
+    "no-shadow": 0,
+    "@typescript-eslint/no-shadow": 0,
+    "no-param-reassign": 0,
+    "no-underscore-dangle": 0,
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": "warn",
+    "import/no-named-as-default-member": 0,
+    "import/no-named-as-default": 0,
+    "import/extensions": [
+      "warn",
+      {
+        "tsx": "never"
+      }
+    ],
+    "no-console": [
+      "warn",
+      {
+        "allow": ["warn", "error", "time", "timeEnd"]
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 80,
+        "ignoreStrings": true,
+        "ignoreComments": true
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "warn",
+      {
+        "devDependencies": true
+      }
+    ],
+    "implicit-arrow-linebreak": 0,
+    "import/no-unused-modules": [
+      1,
+      {
+        "unusedExports": true
+      }
+    ],
+    "eslint-comments/no-unused-disable": "warn",
+    "eslint-comments/disable-enable-pair": [
+      "error",
+      {
+        "allowWholeFile": true
+      }
+    ],
+    "classnames-enhanced/prefer-classnames-function": [
+      1,
+      {
+        "maxSpaceSeparatedClasses": 7
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ]
+      }
+    ]
+  }
+}

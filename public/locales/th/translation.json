@@ -1,0 +1,987 @@
+{
+  "generic": {
+    "add": "เพิ่ม",
+    "back": "ย้อนกลับ",
+    "cancel": "ยกเลิก",
+    "caseCount": "{{count}} คน",
+    "createNew": "สร้างเคสใหม่",
+    "confirm": "ยืนยัน",
+    "error": "มีข้อผิดพลาดบางอย่างเกิดขึ้น",
+    "expired": "หมดอายุ",
+    "expiredAt": "หมดอายุ {{expiry}}",
+    "expiresIn": "{{expiry}}หมดอายุ",
+    "failed": "ไม่ผ่าน",
+    "fromDate": "จาก {{date}}",
+    "lifeLong": "ตลอดชีพ",
+    "loading": "กำลังโหลดข้อมูล...",
+    "next": "ถัดไป",
+    "noData": "ยังไม่มีข้อมูล",
+    "passed": "ผ่าน",
+    "remove": "ลบ",
+    "reuse": "ใช้เคสซ้ำ",
+    "see": "ดูผล",
+    "seeDetails": "ดูรายละเอียด",
+    "send": "ส่ง",
+    "showAllColumns": "แสดงคอลัมน์ทั้งหมด",
+    "skip": "ข้าม",
+    "download": "ดาวน์โหลด",
+    "continue": "ดำเนินการต่อ",
+    "and": "และ",
+    "moreThan": "มากกว่า",
+    "lessThan": "น้อยกว่า",
+    "within": "ภายใน",
+    "downloadCSV": "ดาวน์โหลด <strong>CSV</strong>",
+    "downloadXLSX": "ดาวน์โหลด <strong>XLSX</strong>",
+    "save": "บันทึก",
+    "downloadResultReport": "ดาวน์โหลดผลการตรวจสอบ"
+  },
+  "guide": {
+    "position": "ตำแหน่ง",
+    "code": "รหัส",
+    "copied": "คัดลอกโค้ดไปยังคลิปบอร์ดแล้ว",
+    "description": "นอกจากต้องการรูปแบบข้อมูลที่เฉพาะตัวแล้ว บางคอลัมน์จำเป็นต้องมีรหัสเฉพาะที่ระบบสามารถอ่านและแสดงข้อมูลออกมาตามที่ผู้ใช้ต้องการอีกด้วย นี่คือรายการรหัสที่ใช้แทนข้อมูลต่าง ๆ",
+    "header": "สเปรดชีต",
+    "productPlan": "ชนิดของกรมธรรม์",
+    "subHeader": "นี่คือตัวอย่างของ E-KYC Dashboard ในไฟล์ spreadsheet จะมีบางคอลัมน์ที่ต้องใส่ข้อมูลในรูปแบบที่เฉพาะตัวเพื่อให้ระบบสามารถอ่านและสร้างเคสขึ้นมาได้ ถ้าใส่ข้อมูลไม่ถูกต้องระบบจะไม่สามารถสร้างเคสขึ้นมาได้ กล่องด้านล่างนี้จะแสดงคอลัมน์ที่ต้องการรูปแบบที่เฉพาะตัวในการใส่ข้อมูล",
+    "subTitle": "Spreadsheet client’s templet ได้มอบทางออกให้กับผู้ใช้ที่ต้องการสร้างเคสมากกว่า 1 เคสในครั้งเดียว โดยการใส่ข้อมูลลงไปในไฟล์ csv และอัพโหลดลง E-KYC Dashboard ระบบจะทำการสร้างเคสที่ใส่ข้อมูลมาถูกต้องอย่างอัตโนมัติและผู้ใช้สามารถดำเนินการขั้นตอนต่อไปได้ในทันที",
+    "title": "วิธีการใส่ข้อมูลในสเปรดชีต",
+    "titleCode": "คำนำหน้า",
+    "example": "ตัวอย่าง",
+    "tooltip": "คลิ๊กเพื่อคัดลอก",
+    "infoRequired": {
+      "position": "จำเป็นต้องใส่เครื่องหมายอัญประกาศระหว่างรหัสตำแหน่ง \nและจำเป็นต้องใส่รหัสที่กำหนดให้เท่านั้น",
+      "citizenID": "จำเป็นต้องใส่เครื่องหมายอัญประกาศระหว่างเลขบัตรประจำตัวประชาชน",
+      "title": "จำเป็นต้องใส่รหัสที่กำหนดให้เท่านั้น",
+      "name": "จำเป็นต้องใส่ข้อมูล",
+      "surname": "จำเป็นต้องใส่ข้อมูล",
+      "baseSalary": "จำเป็นต้องใส่เครื่องหมายอัญประกาศระหว่างเลข",
+      "passportNumber": "จำเป็นต้องใส่เครื่องหมายอัญประกาศระหว่างเลขพลาสปอร์ต",
+      "mobile": "จำเป็นต้องใส่เครื่องหมายอัญประกาศระหว่างเบอร์โทร",
+      "firstName": "จำเป็นต้องใส่ข้อมูล",
+      "middleName": "จำเป็นต้องใส่ข้อมูล",
+      "lastName": "จำเป็นต้องใส่ข้อมูล",
+      "department": "จำเป็นต้องใส่ข้อมูล",
+      "email": "จำเป็นต้องใส่ข้อมูล",
+      "notifyType": "จำเป็นต้องใส่ข้อมูล",
+      "dateOfBirth": "จำเป็นต้องใส่ข้อมูลตามแบบ ISO",
+      "phoneNumber": "จำเป็นต้องใส่เครื่องหมายอัญประกาศระหว่างเบอร์โทรศัพท์"
+    }
+  },
+  "bulkSelected": {
+    "selected": "เลือกแล้ว {{count}}"
+  },
+  "datePicker": {
+    "today": "วันนี้",
+    "yesterday": "เมื่อวาน",
+    "week": "7 วันที่แล้ว",
+    "twoWeek": "14 วันที่แล้ว",
+    "month": "30 วันที่แล้ว",
+    "submit": "เลือก",
+    "close": "ปิด",
+    "clear": "เลือกวันที่"
+  },
+  "progressBar": {
+    "title": "วันที่ได้รับผลตรวจ"
+  },
+  "createCaseForm": {
+    "title": "สร้างเคส",
+    "choosePosition": "เลือกตำแหน่งผู้สมัคร",
+    "inputForm": "ระบุรายละเอียดข้อมูลผู้สมัคร",
+    "types": {
+      "manualInput": {
+        "header": "เลือกวิธีการสร้างเคส",
+        "title": "กรอกข้อมูลเอง",
+        "subTitle": "กรอกข้อมูลผู้สมัครทีละคนในระบบ"
+      },
+      "csvInput": {
+        "title": "อัปโหลดไฟล์",
+        "subTitle": "อัปโหลด xlsx หรือ csv เข้ามาในระบบ"
+      }
+    },
+    "modal": {
+      "title": "ออกจากการสร้างเคส",
+      "subTitle": "ข้อมูลทั้งหมดที่คุณกรอกไว้จะไม่ถูกบันทึก คุณต้องการออกหรือไม่?",
+      "confirmButton": "ออกจากหน้านี้",
+      "cancelButton": "อยู่ต่อ"
+    },
+    "form": {
+      "add": "เพิ่มผู้สมัคร",
+      "remove": "ลบ"
+    },
+    "result": {
+      "confirm": "ยืนยันการสร้างเคส",
+      "header": "ตรวจสอบข้อมูลการสร้างเคส",
+      "title": "คำนำหน้า",
+      "name": "ชื่อ",
+      "dateOfBirth": "วันเกิด",
+      "address": "การติดต่อ",
+      "age": "({{ age }}ปี)",
+      "inspection": "การตรวจ:",
+      "inspectionNumber_one": "{{ count }} รายการ",
+      "inspectionNumber_other": "{{ count }} รายการ",
+      "applicant": "จำนวนผู้สมัคร:",
+      "applicantNumber_one": "{{ count }} คน",
+      "applicantNumber_other": "{{ count }} คน"
+    },
+    "labels": {
+      "applicants": "ผู้สมัครคนที่ {{count}}",
+      "selectPosition": "ตำแหน่งผู้สมัคร",
+      "recommendedProcess_one": "รายการที่ควรตรวจสอบ ( {{count}} รายการ )",
+      "recommendedProcess_other": "รายการที่ควรตรวจสอบ ( {{count}} รายการ )",
+      "frontIdCard": "พิสูจน์ตัวตน",
+      "passport": "พิสูจน์ตัวตน",
+      "dipChip": "ดิปชิป",
+      "criminalRecord": "ตรวจสอบประวัติอาชญากรรม",
+      "socialSecurityHistory": "ตรวจสอบประกันสังคม",
+      "adverseMedia": "ตรวจสอบข่าวฉาวออนไลน์",
+      "bankruptcy": "ตรวจสอบประวัติการล้มละลาย",
+      "sanction": "ตรวจสอบแซงชันลิสต์",
+      "education": "ตรวจสอบประวัติการศึกษา",
+      "income": "ตรวจสอบรายได้",
+      "employmentReference": "ตรวจสอบผู้อ้างอิง",
+      "dateOfBirth": "วันที่เกิด",
+      "contract": "ข้อมูลการติดต่อ",
+      "baseSalary": "ฐานเงินเดือน",
+      "email": "อีเมล",
+      "firstName": "ชื่อจริง",
+      "middleName": "ชื่อกลาง (ถ้ามี)",
+      "lastName": "นามสกุล",
+      "notifyType": "ช่องทางส่งลิงก์",
+      "passportNumber": "หมายเลขหนังสือเดินทาง",
+      "phoneNumber": "หมายเลขโทรศัพท์",
+      "remark": "หมายเหตุ",
+      "required": "จำเป็น",
+      "risk": "ระดับความเสี่ยง",
+      "gender": "เพศ",
+      "title": "คำนำหน้า",
+      "translations.en.label": "อังกฤษ",
+      "translations.en.name": "อังกฤษ",
+      "translations.th.label": "ไทย",
+      "translations.th.name": "ไทย",
+      "selectCase": "เลือกเคส",
+      "dependenciesRequired": "การพึ่งพาที่จำเป็น",
+      "verifications": "การตรวจสอบ",
+      "applyPosition": "สมัครตำแหน่ง",
+      "department": "แผนก"
+    },
+    "placeholders": {
+      "baseSalary": "ฐานเงินเดือน",
+      "certificationNumber": "Certification No.",
+      "citizenId": "บัตรประจำตัวประชาชน",
+      "claimNotifyNumber": "Claim Notify Number",
+      "dateOfBirth": "วันเกิด",
+      "email": "ระบุอีเมล",
+      "firstName": "ชื่อจริง",
+      "middleName": "ชื่อกลาง",
+      "lastName": "นามสกุล",
+      "notifyType": "ช่องทางส่งลิงก์",
+      "passportNumber": "ระบุหมายเลขหนังสือเดินทาง",
+      "phoneNumber": "ระบุหมายเลขโทรศัพท์",
+      "productPlan": "ผลิตภัณฑ์",
+      "remark": "หมายเหตุ",
+      "required": "จำเป็น",
+      "title": "คำนำหน้า",
+      "translations.en.label": "อังกฤษ",
+      "translations.en.name": "อังกฤษ",
+      "translations.th.label": "ไทย",
+      "translations.th.name": "ไทย",
+      "applyPosition": "สมัครตำแหน่ง",
+      "department": "แผนก"
+    }
+  },
+  "duplicate": {
+    "title": "แจ้งเตือน",
+    "cancel": "ยกเลิกเคสนี้",
+    "message": {
+      "success_one": "สร้างเคสสำเร็จ ({{count}} เคส)",
+      "success_other": "สร้างเคสสำเร็จ ({{count}} เคส)",
+      "error": "มีข้อผิดพลาดบางอย่างเกิดขึ้น"
+    },
+    "modal": {
+      "title": "ออกจากการสร้างเคส",
+      "subTitle": "เคสจะถูกดำเนินการตามที่เลือกไว้"
+    },
+    "header": {
+      "createdAt": "วันที่สร้าง",
+      "completedAt": "วันที่ได้รับผล",
+      "status": "สถานะ",
+      "process": "เคสที่ตรวจ",
+      "details": "รายละเอียด"
+    },
+    "warning": {
+      "title": "ผู้สมัครได้ทำการตรวจล่าสุดเมื่อ {{date}} ({{day}})",
+      "subTitle": "กรุณาตรวจสอบรายละเอียดเพื่อป้องกันการตรวจซ้ำ"
+    }
+  },
+  "months": {
+    "placeholder": {
+      "day": "วันที่",
+      "month": "เดือน",
+      "year": "ปี"
+    },
+    "jan": "มกราคม",
+    "feb": "กุมภาพันธ์",
+    "mar": "มีนาคม",
+    "apr": "เมษายน",
+    "may": "พฤษภาคม",
+    "jun": "มิถุนายน",
+    "jul": "กรกฎาคม",
+    "aug": "สิงหาคม",
+    "sep": "กันยายน",
+    "oct": "ตุลาคม",
+    "nov": "พฤศจิกายน",
+    "dec": "ธันวาคม"
+  },
+  "createCaseCsv": {
+    "title": "สร้างเคสโดยการอัปโหลดข้อมูล",
+    "description": "เลือกไฟล์ที่ต้องการอัปโหลด",
+    "exampleFile": {
+      "title": "ไฟล์ตัวอย่างข้อมูลต้นแบบ",
+      "description": "คุณสามารถดาวน์โหลดไฟล์ตัวอย่างข้อมูลต้นแบบเพื่อกรอกข้อมูลและอัปโหลดเข้ามาในระบบได้",
+      "instruction": "อ่านคู่มือการใช้งาน"
+    },
+    "validate": {
+      "title": "สร้างเคสโดยการอัปโหลดข้อมูล",
+      "description": "พบข้อผิดพลาด {{count}} รายการ กรุณาตรวจสอบและแก้ไขข้อมูลให้ถูกต้อง",
+      "delete": "คุณแน่ใจหรือไม่ว่าคุณจะลบเคสนี้",
+      "isIncorrect": "ไม่ถูกต้อง"
+    },
+    "fields": {
+      "position": "ตำแหน่ง",
+      "title": "คำนำหน้า",
+      "firstName": "ชื่อ",
+      "middleName": "ชื่อกลาง (ถ้ามี)",
+      "lastName": "นามสกุล",
+      "dateOfBirth": "วันเกิด",
+      "baseSalary": "ฐานเงินเดือน",
+      "department": "แผนก",
+      "passportNumber": "หมายเลขหนังสือเดินทาง",
+      "phoneNumber": "หมายเลขโทรศัพท์",
+      "email": "อีเมล",
+      "notifyType": "ช่องทางส่งลิงก์",
+      "delete": ""
+    },
+    "validations": {
+      "required": "ต้องระบุ{{fieldName}}",
+      "invalid": "{{fieldName}}ไม่ถูกต้อง"
+    }
+  },
+  "fileUpload": {
+    "drag": "ลากและวางไฟล์ที่นี่หรือ",
+    "click": "เลือกไฟล์"
+  },
+  "tag": {
+    "empty": "ไม่มีแท็กในระบบ",
+    "title": {
+      "filter": "แท็กที่มีการค้นหาบ่อย",
+      "suggest": "แท็กที่แนะนำ"
+    },
+    "subTitle": "โปรดกดปุ่ม <strong>เพิ่ม</strong> หรือ <strong>Enter</strong> เพื่อสร้างแท็กใหม่",
+    "button": "เพิ่ม",
+    "placeholder": {
+      "tagOperator": "มี",
+      "input": "ระบุแท็กที่ต้องการ",
+      "filter": "เลือกแท็ก",
+      "noInput": "เพิ่มแท็ก"
+    }
+  },
+  "filters": {
+    "search": "ค้นหา",
+    "searchFilters": "ค้นหาด้วย",
+    "positions": "ตำแหน่งผู้สมัคร",
+    "completedAt": "วันที่เสร็จสิ้น",
+    "tags": "แท็ก",
+    "clear": "ล้าง",
+    "searchFieldTooltip": {
+      "searchBy": "ค้นหาโดย {{labels}}",
+      "labels": {
+        "firstName": "ชื่อ",
+        "middleName": "ชื่อกลาง",
+        "lastName": "นามสกุล",
+        "citizenId": "เลขบัตรประชาชน",
+        "phoneNumber": "เบอร์มือถือ",
+        "email": "อีเมล"
+      }
+    },
+    "placeholder": {
+      "search": "พิมพ์เพื่อค้นหา",
+      "positions": "เลือกตำแหน่งผู้สมัคร"
+    }
+  },
+  "validation": {
+    "caseType": "กรุณาเลือกประเภทเคส",
+    "citizenID": "กรุณากรอกหมายเลขบัตรประจำตัวประชาชนที่ถูกต้อง",
+    "dobCaseType": "อายุไม่ตรงกับประเภทเคส",
+    "email": "กรุณากรอกรูปแบบอีเมลที่ถูกต้อง",
+    "emailAlreadyExists": "บัญชีอีเมลนี้ถูกใช้งานแล้ว",
+    "link": "กรุณากรอกรูปแบบลิงค์ที่ถูกต้อง",
+    "passportNumber": "กรุณากรอกหมายเลขหนังสือเดินทางที่ถูกต้อง",
+    "phone": "กรุณากรอกหมายเลขโทรศัพท์ที่ถูกต้อง",
+    "required": "จำเป็นต้องระบุฟิลด์นี้",
+    "retryLimit": "ต้องเป็นตัวเลขที่ถูกต้อง",
+    "thaiName": "กรุณากรอกชื่อของท่านเป็นภาษาไทย",
+    "englishName": "กรุณากรอกชื่อของท่านเป็นภาษาอังกฤษ",
+    "confirmPassword": "รหัสผ่านต้องตรงกัน",
+    "inputDifferentLanguage": "กรุณากรอกชื่อเป็นภาษาเดียวกัน",
+    "atLeastOneNumber": "รหัสผ่านต้องประกอบด้วย ตัวเลข",
+    "atLeastOneLowerCase": "รหัสผ่านต้องประกอบด้วย อักขระพิมพ์เล็ก",
+    "atLeastOneUpperCase": "รหัสผ่านต้องประกอบด้วย อักขระพิมพ์ใหญ่",
+    "passwordLength": "รหัสผ่านต้องมีอักขระอย่างน้อย {{min}} ตัว แต่ไม่เกิน {{max}} ตัว",
+    "minPasswordLength": "รหัสผ่านต้องมีอักขระอย่างน้อย {{min}} ตัว",
+    "maxPasswordLength": "รหัสผ่านต้องมีอักขระไม่เกิน {{max}} ตัว",
+    "pdfPasswordBlacklistedChar": "รหัสผ่านต้องไม่มี $ \\ ' \" ` และเว้นวรรค"
+  },
+  "pageNotFound": {
+    "title": "404",
+    "subTitle": "ขออภัย, ไม่พบหน้าที่คุณต้องการ"
+  },
+  "sidebar": {
+    "logout": "ออกจากระบบ",
+    "dashboard": "แดชบอร์ด",
+    "backgroundCheck": "ตรวจสอบประวัติ",
+    "help": "ความช่วยเหลือ",
+    "setting": "ตั้งค่า",
+    "selectLanguage": "เลือกภาษา"
+  },
+  "language": {
+    "th": "ไทย",
+    "en": "English"
+  },
+  "resendLink": {
+    "button": "ส่งลิงก์",
+    "sending": "กำลังส่ง",
+    "sent": "ส่งแล้ว",
+    "confirmTitle": "ยืนยันการส่งลิงก์อีกครั้ง",
+    "lastSent": "ส่งล่าสุด: {{date}}",
+    "link": "ลิงก์",
+    "sms": "หมายเลขโทรศัพท์",
+    "email": "อีเมล",
+    "formTitle": "ข้อมูลการติดต่อ (สำหรับส่งลิงก์)",
+    "copied": "คัดลอกโค้ดไปยังคลิปบอร์ดแล้ว"
+  },
+  "failedReasons": {
+    "title": "สรุปข้อผิดพลาด",
+    "reasonsCount": "{{count}} เหตุผล",
+    "frontIdCard": {
+      "default": "หน้าบัตรประชาชนไม่ผ่าน",
+      "aboutToExpire": "บัตรประชาชนใกล้หมดอายุ",
+      "comparison": "ข้อมูลบัตรประชาชนไม่ตรงกับข้อมูลตั้งต้น",
+      "expired": "บัตรประชาชนหมดอายุ",
+      "font": "รูปแบบตัวอักษรไม่ตรงกับรูปแบบตัวอักษรมาตรฐาน",
+      "hologram": "รูปแบบโฮโลแกรมไม่ถูกต้อง",
+      "microprint": "รูปแบบลายน้ำบนบัตรประชาชนไม่ถูกต้อง",
+      "mugshot": "รูปแบบรูปภาพในบัตรประชาชนไม่ถูกต้อง (เบลอ, บดบัง)",
+      "recapture": "ตรวจพบการถ่ายภาพบัตรจากสำเนาหรือหน้าจอมอนิเตอร์",
+      "redLine": "รูปแบบลายน้ำบนรูปภาพใบหน้าบนบัตรประชาชนไม่ถูกต้อง",
+      "restrictedAge": "อายุไม่ถึงเกณฑ์ที่กำหนด",
+      "light": "ข้อมูลบนบัตรประชาชนถูกบดบังโดยสิ่งอื่น"
+    },
+    "passport": {
+      "default": "ตรวจพาสปอร์ตไม่ผ่าน",
+      "aboutToExpire": "พาสปอร์ตใกล้หมดอายุ",
+      "activeAuthFailed": "ตรวจพบความผิดปกติของพาสปอร์ต (Active Authentication)",
+      "chipAuthFailed": "ตรวจพบความผิดปกติของพาสปอร์ต (Chip Authentication)",
+      "comparison": "ข้อมูลพาสปอร์ตไม่ตรงกับข้อมูลตั้งต้น",
+      "expired": "พาสปอร์ตหมดอายุ",
+      "nfcNotSupported": "อุปกรณ์ไม่รองรับ NFC",
+      "passiveAuthFailed": "ตรวจพบความผิดปกติของพาสปอร์ต (Passive Authentication)",
+      "restrictedAge": "อายุไม่ถึงเกณฑ์ที่กำหนด",
+      "restrictedCountry": "ประเทศที่ตรวจพบไม่อยู่ในเกณฑ์ของการตรวจสอบ (Country)",
+      "restrictedNationality": "ประเทศที่ตรวจพบไม่อยู่ในเกณฑ์ของการตรวจสอบ (Nationality)"
+    },
+    "backIdCard": {
+      "default": "ตรวจหลังบัตรประชาชนไม่ผ่าน",
+      "comparison": "ข้อมูลหลังบัตรประชาชนไม่ตรงกับข้อมูลตั้งต้น"
+    },
+    "liveness": {
+      "default": "พิสูจน์ความเป็นบุคคลไม่ผ่าน"
+    },
+    "faceRecognition": {
+      "default": "เปรียบเทียบใบหน้าไม่ผ่าน",
+      "comparison": "ใบหน้าไม่ตรงกัน"
+    },
+    "faceAttributes": {
+      "hat": "หมวก",
+      "glasses": "แว่นกันแดด",
+      "mask": "หน้ากาก",
+      "moreThanOnePerson": "ตรวจพบมากกว่า 1 ใบหน้า",
+      "faceOccluded": "ตรวจพบวัตถุบดบังใบหน้า"
+    },
+    "dopa": {
+      "default": "DOPA ไม่ผ่าน"
+    },
+    "dipChip": {
+      "default": "ดิปชิบไม่ผ่าน"
+    },
+    "chipDopa": {
+      "default": "Chip DOPA ไม่ผ่าน"
+    }
+  },
+  "evaluationResultLabel": {
+    "verified": "ตรวจสอบแล้ว",
+    "completed": "ต้องการการตรวจสอบ"
+  },
+  "resultProgress": {
+    "noProgress": "รอดำเนินการ",
+    "progressLabel": "ได้รับผล {{ progress }} / {{ total }}",
+    "popupTitle": "ติดตามสถานะ"
+  },
+  "resultOverview": {
+    "verifiedCount": "ผ่าน {{count}} / {{total}}",
+    "allPassed": "ผ่านทั้งหมด"
+  },
+  "flowTable": {
+    "requiredProcesses": "{{ count }} รายการ",
+    "tab": {
+      "all": "ทั้งหมด",
+      "pendingClient": "อยู่ระหว่างดำเนินการ",
+      "blocked": "KYC ไม่ผ่าน",
+      "pendingOperation": "รอผลตรวจ",
+      "received": "ได้รับผลแล้ว"
+    },
+    "receivedTab": {
+      "all": "ตรวจแล้วทั้งหมด",
+      "verified": "ตรวจสอบแล้ว",
+      "completed": "ต้องการการตรวจสอบ"
+    },
+    "status": {
+      "open": "อยู่ระหว่างดำเนินการ",
+      "pendingClient": "อยู่ระหว่างดำเนินการ",
+      "expired": "หมดอายุ",
+      "blocked": "KYC ไม่ผ่าน",
+      "pendingOperation": "รอผลตรวจ",
+      "completed": "ได้รับผลแล้ว",
+      "verified": "ได้รับผลแล้ว",
+      "rejected": "ถูกปฏิเสธโดยพนักงาน",
+      "approved": "อนุมัติโดยพนักงาน"
+    },
+    "header": {
+      "name": "ชื่อ",
+      "position": "ตำแหน่ง",
+      "createdAt": "วันที่สร้าง",
+      "updatedAt": "อัปเดตล่าสุด",
+      "expiresAt": "วันหมดอายุ",
+      "completedAt": "วันที่ได้รับผล",
+      "status": "สถานะ",
+      "details": "รายละเอียด",
+      "citizenId": "เลขบัตรประชาชน",
+      "contact": "การติดต่อ",
+      "requiredProcesses": "การตรวจ",
+      "ownerEmail": "เจ้าของเคส",
+      "failedReasons": "สาเหตุ",
+      "tags": "แท็ก",
+      "resultOverview": "ภาพรวมคะแนน",
+      "resultStatus": "ผลประเมิน"
+    }
+  },
+  "overviewPage": {
+    "pageTitle": "สรุปภาพรวม",
+    "overviewBox": {
+      "title": "ภาพรวมการตรวจสอบประวัติ",
+      "all": "จำนวนผู้ตรวจสอบทั้งหมด",
+      "blocked": "KYC ไม่ผ่าน",
+      "pendingOperation": "รอผลตรวจ",
+      "received": "ได้รับผลตรวจแล้ว",
+      "fromTotal": "จากจำนวนทั้งหมด",
+      "diffTooltip": "เปรียบเทียบกับจำนวนผู้ตรวจสอบตั้งแต่",
+      "diffDaychanges": "จาก {{count}} วันที่ผ่านมา",
+      "noDiff": "จำนวนเท่าเดิม"
+    },
+    "candidatesBox": {
+      "title": "รายชื่อผู้สมัคร"
+    },
+    "resultSummaryBox": {
+      "title": "การประมวลผลตรวจ",
+      "allResults": "ผลตรวจทั้งหมด",
+      "passed": "ตรวจสอบแล้ว",
+      "notPassed": "ต้องการการตรวจสอบ"
+    }
+  },
+  "backgroundCheckPage": {
+    "pageTitle": "ตรวจสอบประวัติ",
+    "createCase": "สร้างเคส"
+  },
+  "helpPage": {
+    "pageTitle": "ความช่วยเหลือ",
+    "documentation": {
+      "title": "เอกสาร",
+      "descriptions": "รับประโยชน์สูงสุดจากแอปของเราโดยดาวน์โหลดคู่มือผู้ใช้ของเรา ไฟล์เหล่านี้จะแนะนำคุณตลอดการใช้แดชบอร์ด",
+      "downloadFiles": "ดาวน์โหลดไฟล์",
+      "empty": "ไม่มีไฟล์เอกสารในขณะนี้"
+    }
+  },
+  "settingsPage": {
+    "pageTitle": "ตั้งค่า",
+    "general": {
+      "title": "ทั่วไป",
+      "logoSetting": {
+        "title": "โลโก้",
+        "subTitle": "ไฟล์ .PNG เท่านั้น ขนาดไม่เกิน 500x500 px",
+        "lightTheme": "สำหรับธีมขาว",
+        "darkTheme": "สำหรับธีมดำ",
+        "lightThemeDescriptions": "โลโก้เป็นภาพสีได้",
+        "darkThemeDescriptions": "โลโก้ต้องตัดกับพื้นสีดำ เช่น สีขาว",
+        "changeImage": "เปลี่ยนรูป",
+        "requiredLogo": "รูปภาพต้องมีขนาด 500 x 500 px หรือน้อยกว่า",
+        "requiredType": "ประเภทไฟล์ไม่ถูกต้อง กรุณาเลือกไฟล์ PNG เท่านั้น"
+      },
+      "buttonsSettings": {
+        "title": "การแสดงปุ่ม",
+        "subTitle": "ปุ่มจะแสดงบนหน้าจอผู้สมัคร",
+        "changeThemeButton": {
+          "title": "ปุ่มเปลี่ยนธีมสี ขาว/ดำ",
+          "subTitle": "หากปิด ผู้สมัครจะเห็นธีมสีขาวเป็นหลัก "
+        },
+        "changeLanguageButton": {
+          "title": "ปุ่มเปลี่ยนภาษา ไทย/EN",
+          "subTitle": "หากปิด ผู้สมัครจะเห็นภาษาไทยเป็นหลัก"
+        }
+      },
+      "fontSettings": {
+        "title": "ฟอนต์",
+        "subTitle": "ฟอนต์จะแสดงบนหน้าจอผู้สมัคร"
+      },
+      "colorSettings": {
+        "title": "สี",
+        "subTitle": "เปลี่ยนสีปุ่มต่างๆบนแดชบอร์ดและหน้าจอฝั่งผู้สมัคร",
+        "description": "สีหลัก (สีปุ่ม)"
+      },
+      "approvedReason": "เหตุผลการอนุมัติเคส",
+      "rejectedReason": "เหตุผลการปฏิเสธเคส"
+    },
+    "criteria": {
+      "tabTitle": "เกณฑ์การประเมินผล",
+      "titleOverall": "ตั้งค่าเกณฑ์การประเมินผลภาพรวม",
+      "titleByPosition": "ตั้งค่าเกณฑ์การประเมินผลตามตำแหน่ง",
+      "subTitle": "ระบบจะประมวลผลจากเงื่อนไขที่คุณตั้งไว้",
+      "sectionTitle": "เกณฑ์ที่จะได้รับ",
+      "position": "ตำแหน่ง",
+      "searchByPosition": "ค้นหาจากตำแหน่ง",
+      "useCriteriaSettingsByPosition": {
+        "label": "ใช้เงื่อนไขแตกต่างกันแยกตามตำแหน่ง",
+        "on": {
+          "confirmTitle": "คุณต้องการตั้งค่าเงื่อนไขแยกตามตำแหน่ง",
+          "confirmMessage": "กด ยืนยัน เพื่อตั้งค่าตามตำแหน่ง"
+        },
+        "off": {
+          "confirmTitle": "คุณต้องการตั้งค่าเงื่อนไขแบบภาพรวม",
+          "confirmMessage": "กด ยืนยัน เพื่อตั้งค่าแบบภาพรวม"
+        }
+      },
+      "positionOverlay": {
+        "title": "ตั้งค่าเงื่อนไข ตำแหน่ง {{position}}",
+        "cancelTitle": "คุณต้องการออกจากหน้านี้",
+        "cancelSubTitle": "กด ยืนยัน เพื่อยกเลิกการแก้ไขและย้อนกลับ"
+      },
+      "criminalRecord": {
+        "default": "ไม่พบประวัติ",
+        "custom": "กำหนดเอง",
+        "formTitle": "เงื่อนไขที่ไม่ยอมรับให้ผ่านเกณฑ์ (พิจารณาจากวันพิพากษา)\nหมายเหตุ: ประเภทคดีอื่นๆนอกจากนี้ จะไม่ผ่านเกณฑ์"
+      },
+      "socialSecurityHistory": {
+        "default": "พบประวัติ",
+        "custom": "กำหนดเอง",
+        "formTitle": "ประวัติงานที่ไม่สามารถยอมรับได้",
+        "overEmployed": "มีประวัติการทำงานซ้อน",
+        "maxYearGap": "ระยะเวลาที่ว่างงาน",
+        "jobSwitch": "จำนวนครั้งที่ย้ายงาน",
+        "blacklistedCompanies": "เคยมีประสบการณ์การทำงานที่",
+        "companyNamePlaceholder": "ชื่อบริษัท",
+        "addCompany": "เพิ่มบริษัท"
+      }
+    },
+    "message": {
+      "success": "บันทึกการตั้งค่าเสร็จสมบูรณ์",
+      "error": "ไม่สามารถบันทึกการตั้งค่า"
+    },
+    "preview": {
+      "title": "ตัวอย่าง",
+      "theme": {
+        "dark": "ธีมดำ",
+        "light": "ธีมขาว"
+      }
+    }
+  },
+  "processes": {
+    "criminalRecord": "ตรวจสอบประวัติอาชญากรรม",
+    "socialSecurityHistory": "ตรวจสอบประกันสังคม",
+    "adverseMedia": "ตรวจสอบข่าวฉาวออนไลน์",
+    "bankruptcy": "ตรวจสอบประวัติการล้มละลาย",
+    "sanction": "ตรวจสอบแซงชันลิสต์",
+    "education": "ตรวจสอบประวัติการศึกษา",
+    "income": "ตรวจสอบรายได้",
+    "employmentReference": "ตรวจสอบผู้อ้างอิง",
+    "kyc": "พิสูจน์ตัวตน",
+    "frontIdCard": "หน้าบัตรประชาชน",
+    "backIdCard": "หลังบัตรประชาชน",
+    "dopa": "ตรวจสอบบัตรประชาชน",
+    "idCardVerification": "ตรวจสอบบัตรประชาชน",
+    "passport": "หนังสือเดินทาง",
+    "liveness": "พิสูจน์ความเป็นบุคคล",
+    "faceRecognition": "เปรียบเทียบใบหน้า",
+    "overview": "ภาพรวม"
+  },
+  "latestClientProcess": {
+    "title": "สถานะล่าสุด",
+    "open": "ยังไม่เริ่มดำเนินการ",
+    "frontIdCard": "ถ่ายหน้าบัตรประชาชน",
+    "backIdCard": "ถ่ายหลังบัตรประชาชน",
+    "dopa": "DOPA",
+    "passport": "ถ่ายหนังสือเดินทาง",
+    "liveness": "เปรียบเทียบใบหน้า",
+    "faceRecognition": "เปรียบเทียบใบหน้า",
+    "criminalRecord": "ลงนามคำขอตรวจประวัติอาชญากรรม",
+    "socialSecurityHistory": "ลงนามคำขอตรวจประวัติประกันสังคม",
+    "education": "อัปโหลดใบรับรองการศึกษา",
+    "income": "อัปโหลดเอกสารแสดงรายได้",
+    "employmentReference": "กรอกฟอร์มผู้อ้างอิง",
+    "undefined": "-"
+  },
+  "caseDetail": {
+    "title": "รายละเอียดเคส",
+    "showOnlyNotVerified": "แสดงเฉพาะส่วนที่ไม่ผ่านการยืนยัน",
+    "historyDropdown": {
+      "label": "ผลตรวจครั้งที่ {{attempt}} ({{date}})"
+    },
+    "menuButton": {
+      "title": "เมนู",
+      "tag": "แท็ก",
+      "resendLink": "ส่งลิงก์",
+      "sendHistory": "ดาวน์โหลดประวัติการส่งลิงก์",
+      "delete": "ลบ",
+      "deletePopup": {
+        "title": "คุณแน่ใจหรือไม่ว่าจะลบเคสนี้?",
+        "subTitle": "หากลบแล้วไม่สามารถแก้ไขได้"
+      }
+    },
+    "summaryReportButton": {
+      "title": "รายงานสรุปผลการตรวจสอบประวัติ",
+      "contact": "กรุณาติดต่อฝ่ายบริการลูกค้า 065-524-2873 \n เพื่อดำเนินการปลดล็อกฟีเจอร์ในการดาวน์โหลด"
+    },
+    "documentPasswords": {
+      "title": "รหัสผ่านไฟล์",
+      "fileName": "ชื่อไฟล์",
+      "password": "รหัสผ่าน",
+      "copied": "คัดลอกรหัสผ่านไปยังคลิปบอร์ดแล้ว",
+      "noFile": "ไม่มีไฟล์"
+    },
+    "downloadZip": {
+      "title": "เอกสารที่เกี่ยวข้องทั้งหมด",
+      "error": {
+        "title": "ดาวน์โหลดไม่สำเร็จ",
+        "detail": "พบข้อผิดพลาดบางประการ"
+      }
+    },
+    "CRSSHResultPasswordOverlay": {
+      "title": {
+        "CR": "โปรดตั้งรหัสผ่านไฟล์ผลการตรวจสอบประวัติอาชญากรรม",
+        "SSH": "โปรดตั้งรหัสผ่านไฟล์ผลการตรวจสอบประวัติประกันสังคม",
+        "CRSSH": "โปรดตั้งรหัสผ่านไฟล์ผลการตรวจสอบประวัติอาชญากรรมและไฟล์ผลการตรวจสอบประวัติประกันสังคม"
+      },
+      "subTitle": "ตั้งรหัสผ่านสำหรับเอกสารนี้เนื่องจากมีข้อมูลส่วนบุคคลที่อ่อนไหว"
+    },
+    "overview": {
+      "citizenId": "เลขบัตรประชาชน",
+      "dateOfBirth": "วันเกิด",
+      "email": "อีเมล",
+      "mugshotDescription": "ข้อมูลใบหน้าเจ้าของจากขั้นตอนการตรวจสอบ",
+      "mugshotTitle": "ใบหน้าผู้ยืนยันตัวตน",
+      "passportNumber": "หมายเลขหนังสือเดินทาง",
+      "phoneNumber": "หมายเลขโทรศัพท์",
+      "sms": "ส่งข้อความ",
+      "updatedAt": "อัปเดตล่าสุด",
+      "sendLinkDate": "วันที่และเวลาที่ส่งลิงก์",
+      "createdBy": "สร้่างโดย",
+      "currentStep": "สถานะล่าสุด"
+    },
+    "verification": {
+      "processResultMenuTab": {
+        "latest": "ผลลัพธ์ล่าสุด",
+        "attemptHistory": "ประวัติย้อนหลัง"
+      },
+      "attempt": {
+        "frontIdCard": "การตรวจสอบหน้าบัตรประชาชน - ครั้งที่ {{count}}",
+        "backIdCard": "การตรวจสอบหลังบัตรประชาชน - ครั้งที่ {{count}}",
+        "passport": "หนังสือเดินทาง - ครั้งที่ {{count}}",
+        "dopa": "ตรวจสอบบัตรประชาชน - ครั้งที่ {{count}}",
+        "faceRecognition": "พิสูจน์ความเป็นบุคคล - ครั้งที่ {{count}}"
+      },
+      "headers": {
+        "initial": "ข้อมูลตั้งต้น",
+        "ocr": "ผลลัพธ์ OCR",
+        "edit": "แก้ไขผลลัพธ์ OCR",
+        "dataSource": "แหล่งข้อมูล",
+        "remark": "คำชี้แจง",
+        "verificationDate": "วันที่ตรวจสอบ",
+        "verificationResult": "ผลการตรวจสอบ",
+        "verificationTime": "เวลาตรวจสอบ",
+        "liveness": "พิสูจน์ความเป็นบุคคล",
+        "faceComparison": "เปรียบเทียบใบหน้า"
+      },
+      "fields": {
+        "citizenId": "หมายเลขบัตรประชาชน",
+        "title": "คำนำหน้า",
+        "firstNameTh": "ชื่อ (ภาษาไทย)",
+        "middleNameTh": "ชื่อกลาง (ภาษาไทย)",
+        "lastNameTh": "นามสกุล (ภาษาไทย)",
+        "firstNameEn": "ชื่อ (ภาษาอังกฤษ)",
+        "middleNameEn": "ชื่อกลาง (ภาษาอังกฤษ)",
+        "lastNameEn": "นามสกุล (ภาษาอังกฤษ)",
+        "dateOfBirth": "เกิดวันที่",
+        "address": "ที่อยู่",
+        "issueDate": "วันออกบัตร",
+        "expiryDate": "วันบัตรหมดอายุ",
+        "passportNumber": "เลขพาสปอร์ต",
+        "firstName": "ชื่อ",
+        "middleName": "ชื่อกลาง",
+        "lastName": "นามสกุล",
+        "gender": "เพศ",
+        "issuingState": "ประเทศที่ออกพาสปอร์ต",
+        "nationality": "สัญชาติ",
+        "laserCode": "รหัสกำกับบัตร"
+      }
+    },
+    "crSSH": {
+      "criminalRecord": {
+        "tableTitle": "ผลการตรวจสอบจากกองทะเบียนประวัติอาชญากร สำนักงานตำรวจแห่งชาติ",
+        "remark": {
+          "verifiedWithRecords": "หมายเหตุ: ผ่านเกณฑ์การรับเข้าทำงานตามที่กำหนดไว้",
+          "notVerified": "หมายเหตุ: ไม่ผ่านเกณฑ์การรับเข้าทำงานเนื่องจากตรวจพบประวัติอาชญากรรม",
+          "minJudgementDay": "หมายเหตุ: ไม่ผ่านเกณฑ์การรับเข้าทำงานเนื่องจากคดีที่พิพากษายังไม่ผ่านตามเกณฑ์ระยะเวลาที่กำหนด (คดีประเภท {{criminalRecordTypes}})"
+        }
+      },
+      "socialSecurityHistory": {
+        "tableTitle": "ผลการตรวจสอบ ประวัติการทำงาน",
+        "startWorking": "เข้าทำงานเมื่อ",
+        "resigned": "ลาออกเมื่อ",
+        "remark": {
+          "notVerifiedWithFailedReasons": "หมายเหตุ: ไม่ผ่านเกณฑ์การรับเข้าทำงานเนื่องจากประวัติการทำงานไม่ตรงตามเกณฑ์ที่ตั้งไว้ ({{reasons}})",
+          "notVerifiedNoRecord": "หมายเหตุ: ไม่ผ่านเกณฑ์การรับเข้าทำงาน เนื่องจากไม่พบประวัติการทำงาน",
+          "overEmployed": "ประวัติทำงานซ้อน",
+          "maxYearGap": "ระยะเวลาที่ว่างงาน",
+          "jobSwitch": "การย้ายงาน",
+          "blacklistedCompanies": "เคยทำงานในบริษัทที่กำหนดไว้"
+        }
+      },
+      "citizenId": "เลขบัตรประชาชน",
+      "notFoundRecord": "ไม่พบประวัติ",
+      "rejected": "ไม่สามารถตรวจสอบได้",
+      "remark": "หมายเหตุ:",
+      "result": "ผลการตรวจสอบ:",
+      "resultWarning": "ห้ามนำข้อมูลไปเผยแพร่ โดยเจ้าของข้อมูลไม่อนุญาต หากฝ่าฝืนมีโทษตามกฎหมายคุ้มครองข้อมูลส่วนบุคคล",
+      "headers": {
+        "order": "ลำดับ",
+        "type": "ระบบการตรวจ",
+        "result": "ผลการตรวจสอบ",
+        "remark": "หมายเหตุ",
+        "receivedDate": "วันที่ได้รับ",
+        "receivedTime": "เวลาที่ได้รับ"
+      },
+      "inspectionSystem": {
+        "criminalRecords": "ประวัติคดีอาญา",
+        "warrantRecords": "ประวัติหมายจับ",
+        "socialSecurity": "ข้อมูลประกันสังคม"
+      }
+    },
+    "employmentReference": {
+      "fields": {
+        "name": "ชื่อ-สกุล",
+        "details": "รายละเอียด",
+        "result": "ผลการตรวจสอบ",
+        "referenceList": "รายชื่อผู้อ้างอิง",
+        "position": "ตำแหน่งของผู้อ้างอิง",
+        "companyName": "บริษัทของผู้อ้างอิง",
+        "phoneNumber": "หมายเลขโทรศัพท์ของผู้อ้างอิง",
+        "companyPosition": "ตำแหน่งของคุณที่ทำงานกับผู้อ้างอิง",
+        "registeredPosition": "ตำแหน่งที่สมัคร"
+      },
+      "result": {
+        "passed": "รับรอง",
+        "failed": "ไม่รับรอง",
+        "unverifiable": "ไม่สามารถตรวจสอบได้"
+      }
+    },
+    "income": {
+      "result": "ผลการตรวจสอบ",
+      "remark": "หมายเหตุ",
+      "headers": {
+        "month": "เดือน",
+        "initial": "ฐานเงินเดือน\n(ข้อมูลตั้งต้น)",
+        "psBase": "ฐานเงินเดือน\n(ใบแจ้งเงินเดือน)",
+        "psNet": "เงินเดือนสุทธิ\n(ใบแจ้งเงินเดือน)",
+        "bsNet": "เงินเดือนสุทธิ\n(เงินฝากถอนในบัญชีเงินฝาก)"
+      }
+    },
+    "education": {
+      "instituteCertificateUrl": "ใบรับรองจากสถาบัน",
+      "method": "วิธีการตรวจสอบ",
+      "result": "ผลการตรวจสอบ",
+      "remark": "หมายเหตุ",
+      "documentUrl": "ใบแสดงผลการศึกษา",
+      "fields": {
+        "instituteCertificateUrl": "รอเอกสารจากทางสถาบันการศึกษา",
+        "method": {
+          "digital": "ตรวจสอบ Digital Transcript กับ DGA",
+          "institute": "ตรวจสอบกับสถาบัน",
+          "unverifiable": "ไม่สามารถตรวจสอบได้"
+        },
+        "result": {
+          "verified": "รับรอง",
+          "notVerified": "ไม่รับรอง"
+        }
+      }
+    },
+    "sanction": {
+      "result": {
+        "title": "ผลตรวจจาก United Nation Sanction",
+        "found": "มีรายชื่อใน Global Sanction List ของ UN, EU หรือ HM",
+        "notFound": "ไม่มีรายชื่อใน Global Sanction List ของ UN, EU หรือ HM"
+      },
+      "alias": "นามแฝง",
+      "birthDate": "เกิดวันที่",
+      "citizenship": "ประชากรประเทศ",
+      "identificationDocuments": "ชนิด",
+      "sanctionBy": "กำหนดโดย",
+      "remark": "หมายเหตุ",
+      "unions": {
+        "un": "สหประชาชาติ",
+        "eu": "สหภาพยุโรป",
+        "hm": "กรมธนารักษ์ในสมเด็จฯ"
+      }
+    },
+    "bankruptcy": {
+      "found": "พบประวัติข้อมูล",
+      "notFound": "ไม่พบประวัติข้อมูล",
+      "citizenId": "เลขบัตรประชาชน",
+      "title": "ผลการตรวจสอบจากกรมบังคับคดี กระทรวงยุติธรรม",
+      "headers": {
+        "result": "ผลการตรวจสอบ",
+        "caseNo": "เรื่องที่",
+        "bankruptcyBlackCaseNo": "คดีล้มละลายหมายเลขดำที่",
+        "bankruptcyRedCaseNo": "คดีล้มละลายหมายเลขแดงที่",
+        "byPlaintiff": "โดยโจทก์"
+      }
+    },
+    "adverseMedia": {
+      "footer": "เราใช้ \"{{searchTerm}}\" เป็นคำหลักในการค้นหาในเครื่องมือค้นหา โปรดทราบว่านี่เป็นการค้นหาเบื้องต้นสำหรับการ ตรวจสอบข่าวฉาวออนไลน์\nเราขอแนะนำให้ประเมินสิ่งเหล่านี้อย่างมีวิจารณญาณ",
+      "notCheck": "ยังไม่มีการค้นหาข่าวฉาวออนไลน์",
+      "notFound": "\"{{searchTerm}}\" ไม่ตรงกับผลการค้นหาข่าวสารใดๆ",
+      "record": "{{countRecord}} รายการ",
+      "from": "จาก keyword",
+      "detected": "ตรวจพบ"
+    }
+  },
+  "status": {
+    "income": {
+      "passed": "ผ่าน",
+      "notPassed": "ไม่ผ่าน",
+      "unableToVerify": "ไม่สามารถตรวจสอบได้"
+    },
+    "batchStatus": {
+      "inProgress": "กำลังดำเนินการ",
+      "notVerified": "ไม่ผ่าน",
+      "verified": "ผ่าน",
+      "rejected": "ถูกปฏิเสธโดยพนักงาน",
+      "approved": "อนุมัติโดยพนักงาน",
+      "needReview": "ต้องการการตรวจสอบ",
+      "checked": "ตรวจสอบเรียบร้อย"
+    },
+    "backgroundCheck": {
+      "null": "ล้างสถานะ",
+      "blocked": "KYC ไม่ผ่าน",
+      "open": "สร้างเคส",
+      "pendingClient": "กำลังดำเนินการ",
+      "pendingOperation": "รอผลการตรวจสอบ",
+      "expired": "หมดอายุ",
+      "rejected": "ถูกปฏิเสธ",
+      "unverifiable": "ไม่สามารถตรวจสอบได้",
+      "completed": "ต้องการการตรวจสอบ",
+      "verified": "ตรวจสอบเรียบร้อย"
+    },
+    "socialSecurityHistory": {
+      "null": "ล้างสถานะ",
+      "blocked": "KYC ไม่ผ่าน",
+      "open": "สร้างเคส",
+      "pendingClient": "กำลังดำเนินการ",
+      "pendingOperation": "รอผลการตรวจสอบ",
+      "expired": "หมดอายุ",
+      "rejected": "ถูกปฏิเสธ",
+      "completed": "ไม่พบประวัติข้อมูล",
+      "verified": "พบประวัติข้อมูล"
+    },
+    "educationDocument": {
+      "received": "ได้รับแล้ว"
+    },
+    "verification": {
+      "accepted": "ให้ความยินยอม",
+      "completed": "เสร็จสิ้น",
+      "expired": "หมดอายุ",
+      "incomplete": "ไม่สมบูรณ์",
+      "in_progress": "กำลังดำเนินการ",
+      "null": "ล้างสถานะ",
+      "open": "สร้างเคส",
+      "verified": "ยืนยันสำเร็จ"
+    }
+  },
+  "manualApprove": {
+    "title": "KYC ไม่ผ่าน",
+    "description": "กรุณาตรวจสอบรายละเอียด เพื่อตัดสินใจอนุมัติให้ดำเนินการต่อหรือปฎิเสธ",
+    "latestRemark": "เหตุผลล่าสุด: ",
+    "remark": "เหตุผล: ",
+    "approve": "อนุมัติ",
+    "reject": "ปฎิเสธ",
+    "confirmModal": {
+      "approved": {
+        "title": "ยืนยันการอนุมัติ",
+        "confirmBy": "อนุมัติให้ผ่านโดย: ",
+        "remarkTitle": "โปรดเลือกเหตุผลที่อนุมัติ"
+      },
+      "rejected": {
+        "title": "ยืนยันการปฎิเสธ",
+        "confirmBy": "ปฎิเสธโดย: ",
+        "remarkTitle": "โปรดเลือกเหตุผลที่ปฎิเสธ"
+      }
+    }
+  },
+  "transaction": {
+    "title": "ประวัติการใช้เครดิต",
+    "searchTooltip": "ค้นหาโดย วัน/เวลา หรือ Transaction Type",
+    "searchFiltersTitle": "Search Filters",
+    "headers": {
+      "dateTime": "วัน/เวลา",
+      "transactionRule": "Transaction Type",
+      "transactionId": "Transaction Id",
+      "creditUsage": "เครดิตที่ใช้"
+    },
+    "placeholder": {
+      "chooseTransactionRule": "เลือก Transaction Type",
+      "chooseDate": "เลือกวันที่"
+    }
+  },
+  "creditBalance": {
+    "yourBalance": "ยอดคงเหลือ:",
+    "credits": "เครดิต"
+  },
+  "format": {
+    "csv": ".csv",
+    "xlsx": ".xlsx"
+  },
+  "lead": {
+    "recommend": "แนะนำ!",
+    "contact": "ให้เราช่วยแนะนำฟังก์ชันการใช้งานที่เหมาะกับคุณ\nติดต่อฝ่ายบริการลูกค้า {{contact}}",
+    "confirmButton": "สนใจ",
+    "cancelButton": "ยกเลิก",
+    "message": {
+      "success": "ระบบได้บันทึกความสนใจของท่านเรียบร้อยแล้ว\nทางฝ่ายบริการลูกค้าจะทำการติดต่อกลับหาท่านโดยเร็วที่สุด",
+      "failed": "มีข้อผิดพลาดบางอย่างเกิดขึ้น"
+    }
+  },
+  "bulkDownloadNotice": {
+    "title": "ระบบจะส่งอีเมลพร้อมแนบลิงก์เพื่อดาวน์โหลดเอกสารให้คุณในอีกประมาณ 30 นาที",
+    "description": "กรุณาดาวน์โหลดภายใน 24 ชั่วโมง หลังจากได้รับอีเมล",
+    "error": {
+      "title": "ดาวน์โหลดไม่สำเร็จ",
+      "detail": "พบข้อผิดพลาดบางประการ"
+    }
+  }
+}

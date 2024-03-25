@@ -1,0 +1,134 @@
+name: Code Integration Check
+on:
+  push:
+    branches:
+      - "develop"
+    paths:
+      - "**"
+      - "!readme"
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.0.2
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            ./node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: Install and build dependencies
+        run: pnpm install
+  
+  lint:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.0.2
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with: 
+          path: |
+            ./node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: install
+        run: pnpm install
+
+      - name: Run lint check
+        run: pnpm run lint
+
+  test:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.0.2
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with: 
+          path: |
+            ./node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: install
+        run: pnpm install
+
+      - name: Run coverage test
+        run: pnpm run test:coverage -- --passWithNoTests
+  
+  sonarcloud:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: SonarCloud scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.MAC_SONAR_TOKEN }}
+  
+  build:
+    needs: [lint, sonarcloud]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.0.2
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: Install and build dependencies
+        run: pnpm install
+
+      - name: build
+        run: pnpm run build

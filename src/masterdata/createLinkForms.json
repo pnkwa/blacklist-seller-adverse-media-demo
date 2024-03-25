@@ -1,0 +1,109 @@
+{
+  "kycForm": {
+    "fields": [
+      {
+        "type": "dropdown",
+        "key": "title",
+        "col": 4,
+        "optionsSource": "titles",
+        "display": "label",
+        "validation": ["required"]
+      },
+      {
+        "type": "text",
+        "key": "firstName",
+        "col": 8,
+        "validation": ["required", "thaiAlphabet"]
+      },
+      {
+        "type": "text",
+        "key": "middleName",
+        "col": 6,
+        "validation": ["thaiAlphabet"]
+      },
+      {
+        "type": "text",
+        "key": "lastName",
+        "col": 6,
+        "validation": ["required", "thaiAlphabet"]
+      },
+      {
+        "type": "date",
+        "key": "dateOfBirth",
+        "validation": ["required", "dobNormal"]
+      },
+      {
+        "type": "currency",
+        "key": "baseSalary",
+        "requiredProcess": "income",
+        "validation": []
+      },
+      {
+        "type": "text",
+        "key": "department",
+        "requiredProcess": "employmentReference",
+        "validation": []
+      },
+      {
+        "type": "notification",
+        "key": "notification"
+      }
+    ]
+  },
+  "passportForm": {
+    "fields": [
+      {
+        "type": "text",
+        "key": "passportNumber",
+        "validation": ["required", "passportNumber"]
+      },
+      {
+        "type": "dropdown",
+        "key": "title",
+        "col": 4,
+        "optionsSource": "titles",
+        "display": "label",
+        "validation": ["required"]
+      },
+      {
+        "type": "text",
+        "key": "firstName",
+        "col": 8,
+        "validation": ["required"]
+      },
+      {
+        "type": "text",
+        "key": "middleName",
+        "col": 6,
+        "validation": ["thaiAlphabet"]
+      },
+      {
+        "type": "text",
+        "key": "lastName",
+        "col": 6,
+        "validation": ["required"]
+      },
+      {
+        "type": "date",
+        "key": "dateOfBirth",
+        "validation": ["required"]
+      },
+      {
+        "type": "currency",
+        "key": "baseSalary",
+        "requiredProcess": "income",
+        "validation": []
+      },
+      {
+        "type": "text",
+        "key": "department",
+        "requiredProcess": "employmentReference",
+        "validation": []
+      },
+      {
+        "type": "notification",
+        "key": "notification"
+      }
+    ]
+  }
+}

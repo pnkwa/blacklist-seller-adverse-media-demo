@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .content-box {
+    @apply bg-base-100 rounded-box px-6 py-5 shadow-box;
+  }
+
+  .shadow-box {
+    @apply shadow-lg shadow-gray-400/5;
+  }
+
+  .tag-label {
+    @apply px-2 py-0.5 font-bold text-xs rounded-lg;
+  }
+}
+
+:root {
+  --font-family: 'DB Heavent Now', Helvetica, sans-serif;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+
+  /* height: 100vh; */
+  width: 100vw;
+  font-family: var(--font-family);
+}
+
+.wysiwyg ul {
+  @apply list-disc;
+}
+
+.wysiwyg ul li {
+  @apply ml-8;
+}
+
+.wysiwyg p {
+  @apply my-4;
+}
+
+.wysiwyg img {
+  display: initial;
+}
+
+.rdrDateRangePickerWrapper .rdrDefinedRangesWrapper .rdrInputRanges,
+.rdrMonthName {
+  /* Hide date length section */
+  display: none;
+}
+
+/* Always show scroll */
+.custom-scrollbar::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #3d4451;
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+/* Date picker mobile */
+@media screen and (max-width: 639px) {
+  .rdrDateRangePickerWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Side bar section */
+
+  .rdrDateRangePickerWrapper .rdrDefinedRangesWrapper {
+    width: 100%;
+  }
+
+  .rdrDateRangePickerWrapper .rdrDefinedRangesWrapper .rdrStaticRanges {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .rdrDateRangePickerWrapper .rdrCalendarWrapper .rdrMonths .rdrMonth {
+    width: 100%;
+  }
+
+  .rdrDateRangePickerWrapper .rdrStaticRanges button {
+    min-width: fit-content;
+  }
+
+  .rdrDateRangePickerWrapper .rdrStaticRanges button:not(:last-of-type) {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .rdrDateRangePickerWrapper .rdrDefinedRangesWrapper .rdrInputRanges {
+    /* Hide date length section */
+    display: none;
+  }
+}

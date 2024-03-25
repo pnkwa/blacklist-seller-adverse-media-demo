@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_Thin_It_v4.ttf')
+    format('truetype');
+  font-weight: 100;
+  font-style: italic;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_Thin_v4.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_UlLi_It_v4_.ttf')
+    format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_UlLi_v4.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_Li_It_v4.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_Li_v4.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_It_v4.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_v4.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_Med_It_v4.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_Med_v4.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_Bd_It_v4.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_Bd_v4.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_Blk_It_v4.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DB Heavent Now';
+  src: url('%PUBLIC_URL%/fonts/DB_Heavent_Now_Blk_v4.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}

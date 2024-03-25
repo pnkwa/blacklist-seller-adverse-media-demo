@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" className="w-full h-full">
+  <g id="Group_44845" data-name="Group 44845" transform="translate(-1111 -721.948)">
+    <path id="Path_53505" data-name="Path 53505"
+      d="M7.5,15A7.5,7.5,0,1,1,15,7.5,7.5,7.5,0,0,1,7.5,15Zm0-13.125A5.625,5.625,0,1,0,13.125,7.5,5.626,5.626,0,0,0,7.5,1.875Zm2.813,6.563H4.688a.938.938,0,0,1,0-1.875h5.625a.938.938,0,0,1,0,1.875Z"
+      transform="translate(1111 721.948)" fill="currentColor" />
+  </g>
+</svg>
