@@ -164,8 +164,8 @@ devDependencies:
     specifier: ^14.1.2
     version: 14.1.2(react-dom@18.2.0)(react@18.2.0)
   '@types/culori':
-    specifier: ^2.0.4
-    version: 2.0.4
+    specifier: ^2.1.0
+    version: 2.1.0
   '@types/jest':
     specifier: ^29.5.10
     version: 29.5.10
@@ -2645,8 +2645,8 @@ packages:
       '@babel/types': 7.23.5
     dev: true
 
-  /@types/culori@2.0.4:
-    resolution: {integrity: sha512-GeLW8+KBRkwqIgeGrU8EnNbBE2D7waYbQHkx2xnI5exlzSGTMpjWtDaHzLWK1PTYmyJN9u6dPvMYumFevDe+VA==}
+  /@types/culori@2.1.0:
+    resolution: {integrity: sha512-4uJT5CcC9Mi8mACkWShsPHqILMWL0OqoTsfoLJUGzN1mcipcepmmEdzU8b9L1KwyRNN3rnQO39ylI/2VR850zw==}
     dev: true
 
   /@types/estree@1.0.5:
