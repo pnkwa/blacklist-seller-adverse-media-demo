@@ -8,7 +8,7 @@ import {
 
 const appRoutes = createRoutesFromElements(
   <Route element={<Outlet />} errorElement={<div>not found</div>}>
-    <Route path="" element={<div className="text-red-300">bello eiei</div>} />
+    <Route path="" element={<div className="text-green-300">bello eiei</div>} />
   </Route>
 )
 
