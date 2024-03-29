@@ -9,4 +9,7 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths(), svgr()],
   optimizeDeps: { esbuildOptions: { target: 'esnext' } },
   build: { target: 'esnext' },
+  server: {
+    port: 3000,
+  },
 })

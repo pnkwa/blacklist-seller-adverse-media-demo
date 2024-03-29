@@ -6,9 +6,13 @@ import {
   createRoutesFromElements,
 } from 'react-router-dom'
 
+import DemoPage from 'Pages/DemoPage'
+import SettingPage from 'Pages/SettingPage'
+
 const appRoutes = createRoutesFromElements(
   <Route element={<Outlet />} errorElement={<div>not found</div>}>
-    <Route path="" element={<div className="text-blue-300">bello eiei</div>} />
+    <Route path="" element={<DemoPage />} />
+    <Route path="/settings" element={<SettingPage />} />
   </Route>
 )
 
