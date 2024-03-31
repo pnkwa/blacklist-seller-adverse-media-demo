@@ -1,6 +1,5 @@
 import classNames from 'classnames'
 import { useCallback, useEffect, useState } from 'react'
-import axios from 'axios'
 import { PageContentLayout } from 'MainLayout/PageContentLayout'
 
 const SettingPage = () => {
