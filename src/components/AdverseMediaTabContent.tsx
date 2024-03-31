@@ -1,7 +1,24 @@
 import classNames from 'classnames'
 import { Spinner } from 'base/Spinner'
-import { AdverseMediaResult } from 'types/result'
 import NotFoundImage from 'assets/svg/not-found.svg?react'
+
+interface Tag {
+  key: string
+  translations: {
+    en: string
+    th: string
+  }
+}
+interface AdverseMediaResult {
+  displayLink: string
+  id: string
+  link: string
+  title?: string
+  category?: string
+  image?: string
+  description?: string
+  tags: Tag[]
+}
 
 const tableHeaderClassNames = classNames(
   'text-left font-normal p-4 bg-base-200/50 relative',

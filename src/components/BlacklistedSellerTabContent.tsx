@@ -2,7 +2,6 @@ import classNames from 'classnames'
 import IconLink from 'assets/svg/icon-link.svg?react'
 import { dateFormat } from 'utils/date'
 import { dateFormats } from 'config/dateFormat'
-import { BlacklistedSellerResult } from 'types/result'
 import { Spinner } from 'base/Spinner'
 import NotFoundImage from 'assets/svg/not-found.svg?react'
 
@@ -18,6 +17,21 @@ const headerLabels = [
   'วันที่เกิดเหตุ',
   'ดูรายละเอียด',
 ]
+
+interface BlacklistedSellerResult {
+  createAt: string
+  dataEntryDate?: string
+  deletedAt?: string
+  disposedPersonalDataAt?: string
+  id: string
+  product?: string
+  sellerName?: string
+  sellingPage?: string
+  totalAmount?: string
+  transferDate?: string
+  updatedAt?: string
+  url?: string
+}
 
 interface BlacklistedSellerTabContentProps {
   blacklistedSellerdata: BlacklistedSellerResult[]
