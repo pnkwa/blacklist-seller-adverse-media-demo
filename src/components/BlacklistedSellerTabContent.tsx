@@ -49,7 +49,7 @@ const BlacklistedSellerTabContent: React.FC<
         </div>
       )}
 
-      {!loading && blacklistedSellerdata.length > 0 && (
+      {blacklistedSellerdata.length > 0 && (
         <div className="w-full h-full overflow-auto">
           <table className="table text-sm text-base-content text-left">
             <thead>
