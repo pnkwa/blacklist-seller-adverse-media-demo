@@ -41,8 +41,6 @@ interface BlacklistedSellerTabContentProps {
 const BlacklistedSellerTabContent: React.FC<
   BlacklistedSellerTabContentProps
 > = ({ blacklistedSellerdata, loading }) => {
-  console.log('🚀 ~ blacklistedSellerdata:', blacklistedSellerdata)
-
   return (
     <>
       {loading && (
