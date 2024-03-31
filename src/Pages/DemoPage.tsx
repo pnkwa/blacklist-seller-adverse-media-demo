@@ -1,5 +1,5 @@
-import { resourceLimits } from 'worker_threads'
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import classNames from 'classnames'
 import { PageContentLayout } from 'MainLayout/PageContentLayout'
 import IconSearchCandidate from 'assets/svg/icon-search-candidate.svg?react'
@@ -8,12 +8,11 @@ import { Tabs } from 'base/Tabs'
 import AdverseMediaTabContent from 'components/AdverseMediaTabContent'
 import BlacklistedSellerTabContent from 'components/BlacklistedSellerTabContent'
 import { TabItemConfig } from 'types/tabs'
-import { createDemo, reloadBackgroundCheckData } from 'api/api'
+import { createDemo, getBackgroundCheckData } from 'api/api'
 
 const DemoPage = () => {
   const [activeTab, setActiveTab] = useState('media')
   const [loading, setLoading] = useState(false)
-  console.log('🚀 ~ DemoPage ~ loading:', loading)
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [adverseMediaData, setAdverseMediaData] = useState([])
@@ -41,10 +40,29 @@ const DemoPage = () => {
   const apiKey = localStorage.getItem('apiKey') ?? undefined
   const bgcUrl = localStorage.getItem('bgcUrl') ?? undefined
 
+  const getBlacklistedSeller = useCallback(async () => {
+    try {
+      setLoading(true)
+      const blacklistedSellerData = await getBackgroundCheckData(
+        apiKey,
+        bgcUrl,
+        backgroundCheckId
+      )
+      const { results } = blacklistedSellerData.blacklistedSeller
+      setBlacklistedSeller(results)
+      setLoading(false)
+    } catch (error) {
+      console.error('Error:', error)
+      setLoading(false)
+    }
+  }, [apiKey, backgroundCheckId, bgcUrl])
+
   const handleSearch = useCallback(async () => {
     try {
       setLoading(true)
       setAdverseMediaData([])
+      setBackgroundCheckId(undefined)
+      rawResults.current = null
       const response = await createDemo<{ id: string }>(
         `${bgcUrl}/backgroundChecks`,
         apiKey,
@@ -75,45 +93,48 @@ const DemoPage = () => {
     }
   }, [apiKey, bgcUrl, firstName, lastName])
 
-  const tabs: TabItemConfig[] = [
-    {
-      key: 'media',
-      label: 'Adverse Media',
-      content: (
-        <AdverseMediaTabContent
-          adverseMediadata={adverseMediaData}
-          loading={loading}
-        />
-      ),
-    },
-    {
-      key: 'blacklisted',
-      label: 'Blacklisted Seller',
-      content: (
-        <BlacklistedSellerTabContent
-          blacklistedSellerdata={blacklistedSeller}
-          loading={loading}
-        />
-      ),
-    },
-  ]
+  const tabs: TabItemConfig[] = useMemo(
+    () => [
+      {
+        key: 'media',
+        label: 'Adverse Media',
+        content: (
+          <AdverseMediaTabContent
+            adverseMediadata={adverseMediaData}
+            loading={loading}
+          />
+        ),
+      },
+      {
+        key: 'blacklisted',
+        label: 'Blacklisted Seller',
+        content: (
+          <BlacklistedSellerTabContent
+            blacklistedSellerdata={blacklistedSeller}
+            loading={loading}
+          />
+        ),
+      },
+    ],
+    [adverseMediaData, blacklistedSeller, loading]
+  )
 
-  const reload = useCallback(async () => {
+  const reloadAdverseMedia = useCallback(async () => {
     try {
       setLoading(true)
-      const results = await reloadBackgroundCheckData(
+      const data = await getBackgroundCheckData(
         apiKey,
         bgcUrl,
         backgroundCheckId
       )
+      const { results } = data.adverseMedia
       rawResults.current = results
-      console.log('🚀 ~ reload ~ results:', results)
       if (!results.length) {
         setLoading(false)
         setBackgroundCheckId(undefined)
       }
       const validResults = results.filter((r) => r.sentiment === 'negative')
-      console.log('🚀 ~ .then ~ validResults:', validResults)
+
       if (
         !validResults.length &&
         results.every((r) => r.sentiment !== undefined)
@@ -121,7 +142,6 @@ const DemoPage = () => {
         setBackgroundCheckId(undefined)
       }
       setAdverseMediaData(validResults)
-      // setBlacklistedSeller(results)
     } catch (error) {
       console.error('Error:', error)
       setLoading(false)
@@ -129,34 +149,39 @@ const DemoPage = () => {
   }, [apiKey, backgroundCheckId, bgcUrl])
 
   useEffect(() => {
-    if (
-      !backgroundCheckId ||
-      (adverseMediaData.length &&
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (rawResults.current as any[] | null)?.every(
-          (rr) => rr.sentiment !== undefined
-        ))
-    )
+    if (!backgroundCheckId) return
+
+    if (activeTab === 'blacklisted') {
+      getBlacklistedSeller()
       return
-
-    const createTimeout = () => {
-      to.current = setInterval(() => reload(), 1000)
     }
 
-    reload()
-      .then(createTimeout)
-      .catch(() => {
-        createTimeout()
-      })
+    if (
+      !adverseMediaData.length ||
+      !(rawResults.current as any[] | null)?.every(
+        (rr) => rr.sentiment !== undefined
+      )
+    ) {
+      const createTimeout = () => {
+        to.current = setInterval(() => reloadAdverseMedia(), 1000)
+      }
 
-    // eslint-disable-next-line consistent-return
-    return () => {
-      if (to.current) clearTimeout(to.current)
-      to.current = undefined
-      setLoading(false)
+      reloadAdverseMedia().finally(createTimeout)
+
+      // eslint-disable-next-line consistent-return
+      return () => {
+        if (to.current) clearTimeout(to.current)
+        to.current = undefined
+        setLoading(false)
+      }
     }
-    // reload()
-  }, [adverseMediaData.length, backgroundCheckId, bgcUrl, rawResults, reload])
+  }, [
+    activeTab,
+    adverseMediaData.length,
+    backgroundCheckId,
+    getBlacklistedSeller,
+    reloadAdverseMedia,
+  ])
 
   return (
     <PageContentLayout>

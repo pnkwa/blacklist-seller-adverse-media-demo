@@ -13,6 +13,7 @@ const headerLabels = ['News', 'Category', 'Images']
 interface AdverseMediaResultProps {
   adverseMediadata: AdverseMediaResult[]
   loading?: boolean
+  reload?: boolean
 }
 
 const AdverseMediaTabContent: React.FC<AdverseMediaResultProps> = ({

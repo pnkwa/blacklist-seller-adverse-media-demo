@@ -30,7 +30,7 @@ export const createDemo = async <T>(
   }
 }
 
-export const reloadBackgroundCheckData = async (
+export const getBackgroundCheckData = async (
   apiKey?: string,
   bgcUrl?: string,
   backgroundCheckId?: string
@@ -56,9 +56,9 @@ export const reloadBackgroundCheckData = async (
     }
 
     const data = await response.json()
-    const { results } = data.adverseMedia || {}
+    console.log('🚀 ~ data:', data)
 
-    return results || []
+    return data || []
   } catch (error) {
     console.error('Error:', error)
     return []

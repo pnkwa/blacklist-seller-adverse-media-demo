@@ -7,7 +7,7 @@ import { Spinner } from 'base/Spinner'
 import NotFoundImage from 'assets/svg/not-found.svg?react'
 
 const tableHeaderClassNames = classNames(
-  'text-left font-normal p-4 bg-base-200/50 relative',
+  'text-left font-normal p-4 bg-base-200/50 relative text-center',
   "after:content-[''] after:absolute after:w-[1px] after:inset-y-3 after:bg-base-300 after:right-0 last:after:hidden"
 )
 
@@ -28,6 +28,7 @@ const BlacklistedSellerTabContent: React.FC<
   BlacklistedSellerTabContentProps
 > = ({ blacklistedSellerdata, loading }) => {
   console.log('🚀 ~ blacklistedSellerdata:', blacklistedSellerdata)
+
   return (
     <>
       {loading && (
@@ -51,14 +52,16 @@ const BlacklistedSellerTabContent: React.FC<
             <tbody>
               {blacklistedSellerdata.map((item, index) => (
                 <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td>{item.product ?? '-'}</td>
-                  <td>{item.sellingPage ?? '-'}</td>
-                  <td>
-                    {dateFormat(item.transferDate, dateFormats.dayMonthYear) ??
-                      '-'}
+                  <td className="text-center">{index + 1}</td>
+                  <td className="text-center">{item.product ?? null}</td>
+                  <td className="text-center">
+                    {item.sellingPage ?? 'คลิกลิงก์เพื่อดูรายละเอียด'}
                   </td>
-                  <td>
+                  <td className="text-center">
+                    {dateFormat(item.transferDate, dateFormats.dayMonthYear) ??
+                      null}
+                  </td>
+                  <td className="flex justify-center">
                     <a
                       href={item.url}
                       target="_blank"
