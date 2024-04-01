@@ -98,7 +98,7 @@ const AdverseMediaTabContent: React.FC<AdverseMediaResultProps> = ({
       {!loading && adverseMediadata.length === 0 && (
         <div className="flex justify-center items-center flex-col">
           <NotFoundImage className="w-[400px] h-[400px]" />
-          No adverse media data.
+          No negative adverse media news found for the given person.
         </div>
       )}
       {loading && (
