@@ -5,19 +5,6 @@ import { dateFormats } from 'config/dateFormat'
 import { Spinner } from 'base/Spinner'
 import NotFoundImage from 'assets/svg/not-found.svg?react'
 
-const tableHeaderClassNames = classNames(
-  'text-left font-normal p-4 bg-base-200/50 relative text-center',
-  "after:content-[''] after:absolute after:w-[1px] after:inset-y-3 after:bg-base-300 after:right-0 last:after:hidden"
-)
-
-const headerLabels = [
-  'รายการ',
-  'สินค้า',
-  'ช่องทางการช่องโกง',
-  'วันที่เกิดเหตุ',
-  'ดูรายละเอียด',
-]
-
 interface BlacklistedSellerResult {
   createAt: string
   dataEntryDate?: string
@@ -41,6 +28,19 @@ interface BlacklistedSellerTabContentProps {
 const BlacklistedSellerTabContent: React.FC<
   BlacklistedSellerTabContentProps
 > = ({ blacklistedSellerdata, loading }) => {
+  const tableHeaderClassNames = classNames(
+    'text-left font-normal p-4 bg-base-200/50 relative text-center',
+    "after:content-[''] after:absolute after:w-[1px] after:inset-y-3 after:bg-base-300 after:right-0 last:after:hidden"
+  )
+
+  const header = [
+    'รายการ',
+    'สินค้า',
+    'ช่องทางการช่องโกง',
+    'วันที่เกิดเหตุ',
+    'ดูรายละเอียด',
+  ]
+
   return (
     <>
       {loading && (
@@ -54,7 +54,7 @@ const BlacklistedSellerTabContent: React.FC<
           <table className="table text-sm text-base-content text-left">
             <thead>
               <tr>
-                {headerLabels.map((label, index) => (
+                {header.map((label, index) => (
                   <th key={index} className={tableHeaderClassNames}>
                     {label}
                   </th>

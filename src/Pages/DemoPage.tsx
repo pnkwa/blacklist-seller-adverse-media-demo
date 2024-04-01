@@ -186,7 +186,7 @@ const DemoPage = () => {
   return (
     <PageContentLayout>
       <div className="content-box px-0 flex-1 flex flex-col ">
-        <div className="flex flex-col justify-center my-6 mx-16 items-center">
+        <div className="flex flex-col justify-center my-4 mx-16 items-center">
           <IconSearchCandidate className="my-2" />
           <p className="font-bold text-lg">Search Candidates</p>
           <p className="text-center text-neutral-400	">

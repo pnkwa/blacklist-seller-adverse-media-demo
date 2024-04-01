@@ -20,13 +20,6 @@ interface AdverseMediaResult {
   tags: Tag[]
 }
 
-const tableHeaderClassNames = classNames(
-  'text-left font-normal p-4 bg-base-200/50 relative',
-  "after:content-[''] after:absolute after:w-[1px] after:inset-y-3 after:bg-base-300 after:right-0 last:after:hidden"
-)
-
-const headerLabels = ['News', 'Category', 'Images']
-
 interface AdverseMediaResultProps {
   adverseMediadata: AdverseMediaResult[]
   loading?: boolean
@@ -37,6 +30,12 @@ const AdverseMediaTabContent: React.FC<AdverseMediaResultProps> = ({
   adverseMediadata,
   loading,
 }) => {
+  const tableHeaderClassNames = classNames(
+    'text-left font-normal p-4 bg-base-200/50 relative',
+    "after:content-[''] after:absolute after:w-[1px] after:inset-y-3 after:bg-base-300 after:right-0 last:after:hidden"
+  )
+
+  const header = ['News', 'Category', 'Images']
   return (
     <>
       {adverseMediadata.length > 0 && (
@@ -48,7 +47,7 @@ const AdverseMediaTabContent: React.FC<AdverseMediaResultProps> = ({
         >
           <thead>
             <tr>
-              {headerLabels.map((label, index) => (
+              {header.map((label, index) => (
                 <th key={index} className={tableHeaderClassNames}>
                   {label}
                 </th>
