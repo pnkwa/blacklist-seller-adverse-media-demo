@@ -43,7 +43,7 @@
     "react-div-100vh": "^0.7.0",
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",
-    "react-hook-form": "^7.22.1",
+    "react-hook-form": "^7.51.3",
     "react-i18next": "^13.5.0",
     "react-input-mask": "^2.0.4",
     "react-popper": "^2.3.0",
